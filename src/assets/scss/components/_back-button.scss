@@ -1,0 +1,60 @@
+@import '@/assets/scss/variables/media';
+@import '@/assets/scss/variables/colors';
+
+$root: '.tmpl-hh-back-button';
+
+#{$root} {
+  display: flex;
+  margin-right: auto;
+  align-items: center;
+  column-gap: 20px;
+  cursor: pointer;
+
+  &__arrow {
+    width: 100%;
+    max-width: 87px;
+
+    svg path {
+      transition: stroke .3s ease-in-out;
+    }
+  }
+
+  &__text {
+    font-size: 42px;
+    line-height: 99.99%;
+    color: $black;
+    transition: color .3s ease-in-out;
+  }
+
+  &_hidden {
+    display: none;
+  }
+
+  @media(hover: hover) {
+    &:hover {
+      #{$root} {
+        &__text {
+          color: $accent;
+        }
+
+        &__arrow {
+          svg path {
+            stroke: $accent;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: #{$mediaMD}) {
+  #{$root} {
+
+  }
+}
+
+@media (max-width: #{$mediaSM}) {
+  #{$root} {
+
+  }
+}
