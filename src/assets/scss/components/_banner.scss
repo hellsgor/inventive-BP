@@ -1,0 +1,26 @@
+@import '@/assets/scss/variables/media';
+@import '@/assets/scss/variables/colors';
+
+$root: '.tmpl-hh-banner';
+
+#{$root} {
+
+}
+
+@media (max-width: #{$mediaMD}) {
+  #{$root} {
+
+  }
+}
+
+@media (max-width: #{$mediaSM}) {
+  #{$root} {
+
+  }
+}
+
+@media (max-width: #{$mediaXS}) {
+  #{$root} {
+
+  }
+}

@@ -1,0 +1,41 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aquarius</title>
+</head>
+<body>
+<div class="hh-container">
+    <div class="tmpl-hh-brand-container">
+        <div class="tmpl-hh-section">
+            <div class="tmpl-hh-container">
+                {{> banner}}
+            </div>
+        </div>
+    </div>
+
+    <div
+            class="tmpl_hh_vacancy_block"
+            id="tmpl_hh_vacancy_block"
+            style="width: 100%; max-width: 1250px; margin: 0 auto 25px auto; position: relative; padding: 30px 0 0"
+    >
+        <div style="position: absolute; right: 0; top: 15px; z-index: 10">
+            <hht:employer-insider xmlns:hht="http://hh.ru/development/hht" />
+        </div>
+        <h3
+                class="b-subtitle b-employerpage-vacancies-title"
+                style="font-weight: normal; font-size: 18px; margin: 20px 0"
+        >
+            Вакансии компании «
+            <hht:employer-title />
+            »<span class="tmpl_hh_vac_title"></span>
+            <hht:employer-confirmed />
+        </h3>
+        <hht:vacancies filtered="true" />
+    </div>
+</div>
+<script type="module" src="index.js"></script>
+</body>
+</html>

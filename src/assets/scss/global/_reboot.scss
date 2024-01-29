@@ -1,0 +1,50 @@
+@import '@/assets/scss/variables/media';
+@import '@/assets/scss/variables/colors';
+
+body {
+  margin: 0;
+}
+
+.hh-container {
+  margin: 0 auto;
+  width: 1250px;
+}
+
+.tmpl-hh-brand-container * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.tmpl-hh-brand-container {
+  max-width: 1250px;
+}
+
+.tmpl-hh-section {
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+  font-size: 16px;
+  color: $black;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+@media (max-width: #{$mediaMD}) {
+  .hh-container {
+    width: 930px;
+  }
+}
+
+@media (max-width: #{$mediaSM}) {
+  .hh-container {
+    width: 610px;
+  }
+}
+
+@media (max-width: #{$mediaXS}) {
+  .hh-container {
+    width: 100%;
+  }
+}
