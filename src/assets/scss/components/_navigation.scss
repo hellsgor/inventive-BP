@@ -1,0 +1,131 @@
+@import '@/assets/scss/variables/media';
+
+$root: '.tmpl-hh-navigation';
+
+@mixin background($image-path) {
+  background: linear-gradient(180deg, rgba(15, 23, 30, 0.00) 0%, rgba(15, 23, 30, 0.50) 100%), url($image-path), lightgray 50% / cover no-repeat;
+  background-size: contain;
+}
+
+#{$root} {
+  display: flex;
+  flex-wrap: wrap;
+
+
+  &__item {
+    position: relative;
+    overflow: hidden;
+    width: 625px;
+    height: 426px;
+    border-radius: 50px;
+    color: $white;
+    cursor: pointer;
+
+
+    &_office {
+      #{$root}__item-image {
+        @include background('@/assets/images/navigation/office.jpg');
+      }
+
+      #{$root}__item-decor {
+        top: 12px;
+        right: -18px;
+      }
+    }
+
+    &_digital {
+      #{$root}__item-image {
+        @include background('@/assets/images/navigation/digital.jpg');
+      }
+
+      #{$root}__item-decor {
+        top: -8px;
+        right: -13px;
+      }
+    }
+
+    &_retail {
+      #{$root}__item-image {
+        @include background('@/assets/images/navigation/retail.jpg');
+      }
+
+      #{$root}__item-decor {
+        top: -8px;
+        right: -13px;
+      }
+    }
+
+    &_start {
+      #{$root}__item-image {
+        @include background('@/assets/images/navigation/start.jpg');
+      }
+
+      #{$root}__item-decor {
+        top: 9px;
+        right: 119px;
+      }
+    }
+
+    @media(hover: hover) {
+      &:hover {
+        #{$root} {
+          &__item-image {
+            filter: grayscale(100%);
+          }
+
+          &__item-decor {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  &__item-image {
+    width: 100%;
+    height: 100%;
+    transition: filter 0.3s ease-in-out;
+  }
+
+  &__item-name {
+    position: absolute;
+    bottom: 100px;
+    left: 40px;
+    width: fit-content;
+    max-width: 393px;
+    font-size: 100px;
+    line-height: 100%;
+  }
+
+  &__item-description {
+    position: absolute;
+    top: 334px;
+    left: 40px;
+    max-width: 393px;
+    font-size: 25px;
+    line-height: 120%;
+  }
+
+
+  &__item-decor {
+    position: absolute;
+    opacity: 0;
+    transition: opacity ease-in-out .2s;
+  }
+
+}
+
+@media (max-width: #{$mediaMD}) {
+  #{$root} {
+  }
+}
+
+@media (max-width: #{$mediaSM}) {
+  #{$root} {
+  }
+}
+
+@media (max-width: #{$mediaXS}) {
+  #{$root} {
+  }
+}
