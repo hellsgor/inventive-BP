@@ -2,7 +2,7 @@
 
 $root: '.tmpl-hh-navigation';
 
-@mixin background($image-path) {
+@mixin backgroundImage($image-path) {
   background: linear-gradient(180deg, rgba(15, 23, 30, 0.00) 0%, rgba(15, 23, 30, 0.50) 100%), url($image-path), lightgray 50% / cover no-repeat;
   background-size: contain;
 }
@@ -24,7 +24,7 @@ $root: '.tmpl-hh-navigation';
 
     &_office {
       #{$root}__item-image {
-        @include background('@/assets/images/navigation/office.jpg');
+        @include backgroundImage('@/assets/images/navigation/office.jpg');
       }
 
       #{$root}__item-decor {
@@ -35,7 +35,7 @@ $root: '.tmpl-hh-navigation';
 
     &_digital {
       #{$root}__item-image {
-        @include background('@/assets/images/navigation/digital.jpg');
+        @include backgroundImage('@/assets/images/navigation/digital.jpg');
       }
 
       #{$root}__item-decor {
@@ -46,7 +46,7 @@ $root: '.tmpl-hh-navigation';
 
     &_retail {
       #{$root}__item-image {
-        @include background('@/assets/images/navigation/retail.jpg');
+        @include backgroundImage('@/assets/images/navigation/retail.jpg');
       }
 
       #{$root}__item-decor {
@@ -57,7 +57,7 @@ $root: '.tmpl-hh-navigation';
 
     &_start {
       #{$root}__item-image {
-        @include background('@/assets/images/navigation/start.jpg');
+        @include backgroundImage('@/assets/images/navigation/start.jpg');
       }
 
       #{$root}__item-decor {

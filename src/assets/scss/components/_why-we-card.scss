@@ -1,0 +1,85 @@
+@import '@/assets/scss/variables/media';
+
+$root: '.tmpl-hh-why-we-card';
+
+@mixin backgroundImage($image-path) {
+  background: url($image-path), lightgray 50% / cover no-repeat;
+  background-size: contain;
+}
+
+#{$root} {
+  display: flex;
+  padding: 0 28px 29px;
+  border-right: 1px solid $black;
+  flex: 0 0 calc(100% / 4);
+  flex-direction: column;
+  row-gap: 24px;
+
+  &:first-child {
+    padding-left: 40px;
+  }
+
+  &:last-child {
+    padding-right: 40px;
+    border: none;
+  }
+
+  &_development {
+    #{$root}__image {
+      @include backgroundImage('./assets/images/why-we/development.jpg');
+    }
+  }
+
+  &_training {
+    #{$root}__image {
+      @include backgroundImage('./assets/images/why-we/training.jpg');
+    }
+  }
+
+  &_team {
+    #{$root}__image {
+      @include backgroundImage('./assets/images/why-we/team.jpg');
+    }
+  }
+
+  &_reliability {
+    #{$root}__image {
+      @include backgroundImage('./assets/images/why-we/reliability.jpg');
+    }
+  }
+
+
+  &__title {
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 120%;
+    color: $black;
+  }
+
+  &__image {
+    width: 185px;
+    height: 185px;
+    border-radius: 30px;
+  }
+
+  &__description {
+    width: 250px;
+    font-size: 25px;
+    line-height: 120%;
+  }
+}
+
+@media (max-width: #{$mediaMD}) {
+  #{$root} {
+  }
+}
+
+@media (max-width: #{$mediaSM}) {
+  #{$root} {
+  }
+}
+
+@media (max-width: #{$mediaXS}) {
+  #{$root} {
+  }
+}
