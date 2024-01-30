@@ -9,8 +9,8 @@ $root: '.tmpl-hh-navigation';
 
 #{$root} {
   display: flex;
+  margin-bottom: 35px;
   flex-wrap: wrap;
-
 
   &__item {
     position: relative;
