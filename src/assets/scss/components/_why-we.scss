@@ -1,0 +1,49 @@
+@import '@/assets/scss/variables/media';
+
+$root: '.tmpl-hh-why-we';
+
+#{$root} {
+
+  &__title {
+    position: relative;
+    width: fit-content;
+    padding-left: 40px;
+    margin-bottom: 60px;
+
+    h2 {
+
+      font-size: 100px;
+      font-weight: 400;
+      line-height: 100%;
+      color: $black;
+    }
+
+    img {
+      position: absolute;
+      top: -15px;
+      right: -15px;
+      width: 30px;
+      height: auto;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    border-bottom: 1px solid $black;
+  }
+}
+
+@media (max-width: #{$mediaMD}) {
+  #{$root} {
+  }
+}
+
+@media (max-width: #{$mediaSM}) {
+  #{$root} {
+  }
+}
+
+@media (max-width: #{$mediaXS}) {
+  #{$root} {
+  }
+}
