@@ -1,0 +1,79 @@
+@import '@/assets/scss/variables/media';
+
+$root: '.tmpl-hh-appreciate';
+
+@mixin backgroundImage($image-path) {
+  background: url($image-path), lightgray -125.467px 0px / 176.559% 100% no-repeat;
+  background-size: cover;
+}
+
+#{$root} {
+  display: flex;
+  column-gap: 39px;
+
+  &__carousel {
+    width: 600px;
+    height: fit-content;
+  }
+
+  &__carousel-item {
+    width: 600px;
+    height: 705px;
+
+    &_expediency {
+      @include backgroundImage('./assets/images/appreciate/expediency.jpg')
+    }
+
+    &_responsibility {
+      @include backgroundImage('./assets/images/appreciate/responsibility.jpg')
+    }
+
+    &_honesty {
+      @include backgroundImage('./assets/images/appreciate/honesty.jpg')
+    }
+
+    &_respect {
+      @include backgroundImage('./assets/images/appreciate/respect.jpg')
+    }
+
+    &_growth {
+      @include backgroundImage('./assets/images/appreciate/growth.jpg')
+    }
+  }
+
+  &__carousel-pagination {
+    display: flex;
+    height: 44px;
+    align-items: flex-end;
+    justify-content: center;
+    column-gap: 20px;
+  }
+
+  &__carousel-bullet {
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: $black;
+    cursor: pointer;
+
+    &_active {
+      background-color: $accent;
+    }
+  }
+}
+
+@media (max-width: #{$mediaMD}) {
+  #{$root} {
+  }
+}
+
+@media (max-width: #{$mediaSM}) {
+  #{$root} {
+  }
+}
+
+@media (max-width: #{$mediaXS}) {
+  #{$root} {
+  }
+}
