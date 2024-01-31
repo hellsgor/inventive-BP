@@ -10,6 +10,7 @@ $root: '.tmpl-hh-appreciate';
 #{$root} {
   display: flex;
   padding-right: 40px;
+  margin-bottom: 70px;
   column-gap: 39px;
 
   &__carousel {
