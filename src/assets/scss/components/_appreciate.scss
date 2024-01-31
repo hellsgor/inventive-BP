@@ -43,27 +43,6 @@ $root: '.tmpl-hh-appreciate';
     }
   }
 
-  &__carousel-pagination {
-    display: flex;
-    padding-top: 30px;
-    align-items: flex-end;
-    justify-content: center;
-    column-gap: 20px;
-  }
-
-  &__carousel-bullet {
-    display: block;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background-color: $black;
-    cursor: pointer;
-
-    &_active {
-      background-color: $accent;
-    }
-  }
-
   &__text-content {
     display: flex;
     width: 100%;

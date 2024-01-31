@@ -1,0 +1,20 @@
+.tmpl-hh-carousel-pagination {
+  display: flex;
+  padding-top: 30px;
+  align-items: flex-end;
+  justify-content: center;
+  column-gap: 20px;
+}
+
+.tmpl-hh-carousel-bullet {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: $black;
+  cursor: pointer;
+
+  &_active {
+    background-color: $accent;
+  }
+}
