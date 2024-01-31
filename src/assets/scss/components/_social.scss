@@ -1,0 +1,54 @@
+@import '@/assets/scss/variables/media';
+
+$root: '.tmpl-hh-social';
+
+#{$root} {
+  &__title {
+    position: relative;
+    display: flex;
+    margin-bottom: 35px;
+    justify-content: flex-end;
+
+    h2 {
+      width: fit-content;
+      font-size: 100px;
+      font-weight: 400;
+      line-height: 100%;
+      color: $black;
+    }
+
+    img {
+      position: absolute;
+      top: -7px;
+      right: 614px;
+      transform: rotate(-90deg);
+    }
+  }
+
+  &__icons {
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: flex-end;
+    column-gap: 20px;
+  }
+
+  &__icon {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media (max-width: #{$mediaMD}) {
+  #{$root} {
+  }
+}
+
+@media (max-width: #{$mediaSM}) {
+  #{$root} {
+  }
+}
+
+@media (max-width: #{$mediaXS}) {
+  #{$root} {
+  }
+}
