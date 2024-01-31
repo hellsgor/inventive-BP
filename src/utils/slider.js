@@ -8,6 +8,7 @@ class InitSlider {
   constructor(props) {
     this.classSlider = props.classSlider;
     this.settingsSlider = props.settingsSlider;
+    this.customPagination = props.customPagination || null;
 
     this.checkSlider();
 
@@ -56,6 +57,21 @@ class InitSlider {
       .querySelector(`${this.classSlider}__wrapper`)
       ?.removeAttribute('style');
   }
+
+  prepareCustomPagination() {
+    if (this.settingsSlider.customPagination) {
+      document.getElementById(this.settingsSlider.customPagination.containerID)
+        .querySelectorAll(`.${this.settingsSlider.customPagination.itemsClass}`)
+        .forEach((item) => {
+          const itemText = item.querySelector('span');
+
+          itemText.addEventListener(
+            `${this.settingsSlider.customPagination.eventName}`,
+            () =>
+              this.slider.slideTo(Number(item.getAttribute('data-slide-index'))))
+        })
+    }
+  }
 }
 
 const listSliders = [
@@ -96,12 +112,17 @@ const listSliders = [
       spaceBetween: 32,
       centeredSlides: true,
       slidesPerView: 1,
+      customPagination: {
+        containerID: 'tmpl-hh-appreciate-items',
+        itemsClass: 'tmpl-hh-appreciate__item',
+        eventName: 'mouseenter',
+      }
     },
   },
 ];
 
 export const initSliders = () => {
-  listSliders.map((i) => {
-    new InitSlider(i);
+  return listSliders.map((i) => {
+    return new InitSlider(i);
   });
 };

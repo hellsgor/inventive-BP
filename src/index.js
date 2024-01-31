@@ -7,7 +7,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Utils
   // ---------------------------------
-  initSliders();
+  const sliders = initSliders();
+  const appreciateSlider = sliders.find((item) => item.classSlider === '.tmpl-hh-appreciate__carousel');
+  console.log(appreciateSlider)
+  appreciateSlider.prepareCustomPagination();
 
 
   // Modules
