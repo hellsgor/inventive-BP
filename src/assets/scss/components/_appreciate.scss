@@ -1,0 +1,152 @@
+@import '@/assets/scss/variables/media';
+
+$root: '.tmpl-hh-appreciate';
+
+@mixin backgroundImage($image-path) {
+  background: url($image-path), lightgray -125.467px 0px / 176.559% 100% no-repeat;
+  background-size: cover;
+}
+
+#{$root} {
+  display: flex;
+  padding-right: 40px;
+  column-gap: 39px;
+
+  &__carousel {
+    height: fit-content;
+    flex: 0 0 600px;
+  }
+
+  &__carousel-item {
+    width: 600px;
+    height: 705px;
+
+    &_expediency {
+      @include backgroundImage('./assets/images/appreciate/expediency.jpg')
+    }
+
+    &_responsibility {
+      @include backgroundImage('./assets/images/appreciate/responsibility.jpg')
+    }
+
+    &_honesty {
+      @include backgroundImage('./assets/images/appreciate/honesty.jpg')
+    }
+
+    &_respect {
+      @include backgroundImage('./assets/images/appreciate/respect.jpg')
+    }
+
+    &_growth {
+      @include backgroundImage('./assets/images/appreciate/growth.jpg')
+    }
+  }
+
+  &__carousel-pagination {
+    display: flex;
+    padding-top: 30px;
+    align-items: flex-end;
+    justify-content: center;
+    column-gap: 20px;
+  }
+
+  &__carousel-bullet {
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: $black;
+    cursor: pointer;
+
+    &_active {
+      background-color: $accent;
+    }
+  }
+
+  &__text-content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__title {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    padding-top: 7px;
+    padding-left: 36px;
+    flex-direction: column;
+    row-gap: 33px;
+
+
+    h2 {
+      width: fit-content;
+      font-size: 100px;
+      font-weight: 400;
+      line-height: 100%;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 30px;
+    }
+  }
+
+  &__arrow {
+    display: flex;
+    padding-right: 29px;
+    justify-content: flex-end;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    display: inline-block;
+    padding: 28px 40px;
+    border-bottom: 2px solid $black;
+    color: $black;
+
+    &:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    &_active {
+      color: $accent;
+    }
+
+    span {
+      font-size: 42px;
+      text-align: right;
+      line-height: 120%;
+      transition: color .3s ease-in-out;
+
+      @media(hover: hover) {
+        &:hover {
+          color: $accent;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: #{$mediaMD}) {
+  #{$root} {
+  }
+}
+
+@media (max-width: #{$mediaSM}) {
+  #{$root} {
+  }
+}
+
+@media (max-width: #{$mediaXS}) {
+  #{$root} {
+  }
+}
