@@ -4,11 +4,12 @@ class InitSlider {
   classSlider = '';
   settingsSlider = {};
   slider = null;
+  customPagination = null;
 
   constructor(props) {
     this.classSlider = props.classSlider;
     this.settingsSlider = props.settingsSlider;
-    this.customPagination = props.customPagination || null;
+    this.customPagination = props.customPagination;
 
     this.checkSlider();
 
@@ -59,18 +60,37 @@ class InitSlider {
   }
 
   prepareCustomPagination() {
-    if (this.settingsSlider.customPagination) {
-      document.getElementById(this.settingsSlider.customPagination.containerID)
-        .querySelectorAll(`.${this.settingsSlider.customPagination.itemsClass}`)
-        .forEach((item) => {
-          const itemText = item.querySelector('span');
-
-          itemText.addEventListener(
-            `${this.settingsSlider.customPagination.eventName}`,
-            () =>
-              this.slider.slideTo(Number(item.getAttribute('data-slide-index'))))
-        })
+    if (!this.customPagination) {
+      return;
     }
+
+    this.customPagination.items = document.getElementById(this.customPagination.containerID)
+      .querySelectorAll(`.${this.customPagination.itemsClass}`);
+
+
+    this.customPagination.items.forEach((item) => {
+      const itemText = item.querySelector('span');
+
+      itemText.addEventListener(
+        `${this.customPagination.eventName}`,
+        () =>
+          this.slider.slideTo(Number(item.getAttribute('data-slide-index'))))
+    })
+
+    this.slider.on('slideChangeTransitionEnd', () => {
+      const activeSlideIndex = Number(this.slider
+        .wrapperEl.querySelector('.swiper-slide-active')
+        .getAttribute('data-swiper-slide-index'));
+
+      this.customPagination.items.forEach((item) => {
+        const currentCustomItemIndex = Number(item.getAttribute('data-slide-index')) - 1;
+        if (currentCustomItemIndex === activeSlideIndex) {
+          item.classList.add('tmpl-hh-appreciate__item_active');
+        } else {
+          item.classList.remove('tmpl-hh-appreciate__item_active');
+        }
+      })
+    })
   }
 }
 
@@ -112,17 +132,18 @@ const listSliders = [
       spaceBetween: 32,
       centeredSlides: true,
       slidesPerView: 1,
-      customPagination: {
-        containerID: 'tmpl-hh-appreciate-items',
-        itemsClass: 'tmpl-hh-appreciate__item',
-        eventName: 'mouseenter',
-      }
+    },
+    customPagination: {
+      containerID: 'tmpl-hh-appreciate-items',
+      itemsClass: 'tmpl-hh-appreciate__item',
+      eventName: 'mouseenter',
     },
   },
 ];
 
 export const initSliders = () => {
   return listSliders.map((i) => {
-    return new InitSlider(i);
+    const slider = new InitSlider(i);
+    slider.customPagination && slider.prepareCustomPagination();
   });
 };

@@ -110,17 +110,21 @@ $root: '.tmpl-hh-appreciate';
     display: inline-block;
     padding: 28px 40px;
     border-bottom: 2px solid $black;
+    color: $black;
 
     &:last-child {
       padding-bottom: 0;
       border-bottom: none;
     }
 
+    &_active {
+      color: $accent;
+    }
+
     span {
       font-size: 42px;
       text-align: right;
       line-height: 120%;
-      color: $black;
       transition: color .3s ease-in-out;
 
       @media(hover: hover) {
@@ -129,8 +133,6 @@ $root: '.tmpl-hh-appreciate';
         }
       }
     }
-
-
   }
 }
 
