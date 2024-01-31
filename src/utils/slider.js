@@ -69,9 +69,11 @@ class InitSlider {
 
 
     this.customPagination.items.forEach((item) => {
-      const itemText = item.querySelector('span');
+      const target = item.querySelector('span')
+        ? item.querySelector('span')
+        : item;
 
-      itemText.addEventListener(
+      target.addEventListener(
         `${this.customPagination.eventName}`,
         () =>
           this.slider.slideTo(Number(item.getAttribute('data-slide-index'))))
@@ -85,9 +87,9 @@ class InitSlider {
       this.customPagination.items.forEach((item) => {
         const currentCustomItemIndex = Number(item.getAttribute('data-slide-index')) - 1;
         if (currentCustomItemIndex === activeSlideIndex) {
-          item.classList.add('tmpl-hh-appreciate__item_active');
+          item.classList.add(`${this.customPagination.itemsClass}_active`);
         } else {
-          item.classList.remove('tmpl-hh-appreciate__item_active');
+          item.classList.remove(`${this.customPagination.itemsClass}_active`);
         }
       })
     })
@@ -117,8 +119,8 @@ const listSliders = [
       modules: [Autoplay, Pagination],
       pagination: {
         el: '.tmpl-hh-appreciate__carousel-pagination',
-        bulletClass: 'tmpl-hh-appreciate__carousel-bullet',
-        bulletActiveClass: 'tmpl-hh-appreciate__carousel-bullet_active',
+        bulletClass: 'tmpl-hh-carousel-bullet',
+        bulletActiveClass: 'tmpl-hh-carousel-bullet_active',
         clickable: true,
         type: 'bullets',
       },
@@ -137,6 +139,34 @@ const listSliders = [
       containerID: 'tmpl-hh-appreciate-items',
       itemsClass: 'tmpl-hh-appreciate__item',
       eventName: 'mouseenter',
+    },
+  },
+  {
+    classSlider: '.tmpl-hh-social__carousel',
+    settingsSlider: {
+      modules: [Autoplay, Pagination],
+      pagination: {
+        el: '.tmpl-hh-social__carousel-pagination',
+        bulletClass: 'tmpl-hh-carousel-bullet',
+        bulletActiveClass: 'tmpl-hh-carousel-bullet_active',
+        clickable: true,
+        type: 'bullets',
+      },
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      loop: true,
+      speed: 300,
+      allowTouchMove: false,
+      spaceBetween: 32,
+      centeredSlides: true,
+      slidesPerView: 1,
+    },
+    customPagination: {
+      containerID: 'tmpl-hh-social-carousel-custom-pagination',
+      itemsClass: 'tmpl-hh-social__carousel-custom-bullet',
+      eventName: 'click',
     },
   },
 ];

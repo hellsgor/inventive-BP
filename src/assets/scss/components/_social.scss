@@ -2,7 +2,14 @@
 
 $root: '.tmpl-hh-social';
 
+@mixin backgroundImage($image-path) {
+  background: url($image-path), lightgray 50% / cover no-repeat;
+  background-size: cover;
+}
+
 #{$root} {
+  margin-bottom: 70px;
+
   &__title {
     position: relative;
     display: flex;
@@ -35,6 +42,63 @@ $root: '.tmpl-hh-social';
   &__icon {
     width: 44px;
     height: 44px;
+  }
+
+  &__carousel {
+    &-wrapper {
+      width: 100%;
+      height: 703px;
+    }
+
+    &-item {
+      width: 100%;
+      height: 100%;
+
+      &_office {
+        @include backgroundImage('@/assets/images/social/images/office.jpg')
+      }
+
+      &_shop {
+        @include backgroundImage('@/assets/images/social/images/shop.jpg')
+      }
+
+      &_help {
+        @include backgroundImage('@/assets/images/social/images/help.jpg')
+      }
+
+      &_children {
+        @include backgroundImage('@/assets/images/social/images/children.jpg')
+      }
+
+      &_events {
+        @include backgroundImage('@/assets/images/social/images/events.jpg')
+      }
+    }
+
+    &-custom-pagination {
+      display: flex;
+      margin-bottom: 50px;
+      justify-content: flex-end;
+      column-gap: 32px;
+    }
+
+    &-custom-bullet {
+      font-size: 25px;
+      line-height: 120%;
+      color: $black;
+      cursor: pointer;
+      transition: color .3s ease-in-out;
+
+      @media(hover: hover) {
+        &:hover {
+          color: $accent;
+        }
+      }
+
+      &_active {
+        color: $accent;
+      }
+    }
   }
 }
 
