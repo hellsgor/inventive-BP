@@ -5,10 +5,10 @@ import {resolve} from 'path'
 import path from 'node:path';
 import glob from "glob";
 import {ViteImageOptimizer} from 'vite-plugin-image-optimizer';
-import {whyWeCards} from "./src/store/why-we-cards.js";
+import {store} from "./src/store/store.js";
 
 const pageData = {
-  '/index.html': whyWeCards,
+  '/index.html': store,
 };
 
 export default defineConfig({

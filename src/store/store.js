@@ -1,5 +1,5 @@
-export const whyWeCards = {
-  cards: [
+export const store = {
+  whyWeCards: [
     {
       title: 'развитие',
       descr: 'Помогаем расти внутри команды вертикально и горизонтально. Создаём комфортную среду, в которой хочется строить карьеру и достигать большего.',
@@ -19,6 +19,29 @@ export const whyWeCards = {
       title: 'надёжность',
       descr: 'Растём вместе с командой и быстро адаптируемся к изменениям, открываем новые направления и достигаем амбициозных целей.',
       modifier: 'reliability'
+    },
+  ],
+  brands: ['restore:', 'Samsung', 'Xiaomi', 'Street Beat', 'Hiker', 'Мир Кубиков', 'UNOde40'],
+  navigationCards: [
+    {
+      modifier: 'office',
+      name: 'офис',
+      description: 'логистика, финансы, недвижимость и др.',
+    },
+    {
+      modifier: 'digital',
+      name: 'digital',
+      description: 'IT, e-com, маркетинг и др.',
+    },
+    {
+      modifier: 'retail',
+      name: 'retail',
+      description: 'управление магазинами',
+    },
+    {
+      modifier: 'start',
+      name: 'старт карьеры',
+      description: 'розничные магазины, контактный центр, стажировки',
     },
   ]
 }
