@@ -1,11 +1,7 @@
 <div class="swiper tmpl-hh-ticker">
   <div class="swiper-wrapper tmpl-hh-ticker__wrapper">
-    <div class="swiper-slide tmpl-hh-ticker__slide">restore:</div>
-    <div class="swiper-slide tmpl-hh-ticker__slide">Samsung</div>
-    <div class="swiper-slide tmpl-hh-ticker__slide">Xiaomi</div>
-    <div class="swiper-slide tmpl-hh-ticker__slide">Street Beat</div>
-    <div class="swiper-slide tmpl-hh-ticker__slide">Hiker</div>
-    <div class="swiper-slide tmpl-hh-ticker__slide">Мир Кубиков</div>
-    <div class="swiper-slide tmpl-hh-ticker__slide">UNOde40</div>
+    {{#each this}}
+    <div class="swiper-slide tmpl-hh-ticker__slide">{{this}}</div>
+    {{/each}}
   </div>
 </div>
