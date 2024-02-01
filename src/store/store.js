@@ -21,7 +21,15 @@ export const store = {
       modifier: 'reliability'
     },
   ],
-  brands: ['restore:', 'Samsung', 'Xiaomi', 'Street Beat', 'Hiker', 'Мир Кубиков', 'UNOde40'],
+  brands: [
+    {departmentCode: 'irg-112694-rest', name: 'restore:'},
+    {departmentCode: 'irg-112694-sams', name: 'Samsung'},
+    {departmentCode: 'irg-112694-Xiaomi', name: 'Xiaomi'},
+    {departmentCode: 'irg-112694-irgsb', name: 'Street Beat'},
+    {departmentCode: 'irg-112694-hiker', name: 'Hiker'},
+    {departmentCode: 'irg-112694-irgsb', name: 'Мир Кубиков'},
+    {departmentCode: 'irg-112694-uno', name: 'UNOde40'},
+  ],
   navigationCards: [
     {
       modifier: 'office',

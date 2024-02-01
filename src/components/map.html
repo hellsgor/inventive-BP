@@ -3,9 +3,24 @@
     <h2>География вакансий</h2>
     <img alt="" src="./assets/images/decor-arrow.svg">
   </div>
-  <div class="tmpl-hh-map__regions">
-    {{#each this.regions}}
-    <span class="tmpl-hh-map__region">{{this}}</span>
-    {{/each}}
+  <div class="tmpl-hh-map__filters">
+    <div class="tmpl-hh-map__regions">
+      {{#each this.regions}}
+      <!--       <span class="tmpl-hh-map__region">{{this}}</span> -->
+      <a class="tmpl-hh-map__region" href="#tmpl_hh_vacancy_block">{{this}}
+        <hht:vacancies-filter
+          area=""
+        />
+      </a>
+      {{/each}}
+    </div>
+
+    {{> selector
+    options=this.brands
+    parentalClass='tmpl-hh-map__brand'
+    selectName='brand-selector'
+    placeholder='Выбрать бренд'
+    isFilter=true
+    }}
   </div>
 </div>
