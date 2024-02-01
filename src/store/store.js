@@ -22,4 +22,26 @@ export const store = {
     },
   ],
   brands: ['restore:', 'Samsung', 'Xiaomi', 'Street Beat', 'Hiker', 'Мир Кубиков', 'UNOde40'],
+  navigationCards: [
+    {
+      modifier: 'office',
+      name: 'офис',
+      description: 'логистика, финансы, недвижимость и др.',
+    },
+    {
+      modifier: 'digital',
+      name: 'digital',
+      description: 'IT, e-com, маркетинг и др.',
+    },
+    {
+      modifier: 'retail',
+      name: 'retail',
+      description: 'управление магазинами',
+    },
+    {
+      modifier: 'start',
+      name: 'старт карьеры',
+      description: 'розничные магазины, контактный центр, стажировки',
+    },
+  ]
 }
