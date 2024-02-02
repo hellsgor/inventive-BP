@@ -3,8 +3,9 @@
 $root: '.tmpl-hh-map';
 
 #{$root} {
-  padding: 0 40px;
-  margin-bottom: 350px;
+  position: relative;
+  padding: 0 40px 546px;
+  margin-bottom: 70px;
 
   &__title {
     position: relative;
@@ -24,6 +25,11 @@ $root: '.tmpl-hh-map';
       right: -20px;
       width: 30px;
     }
+  }
+
+  &__filters {
+    position: relative;
+    z-index: 10;
   }
 
   &__regions {
@@ -75,7 +81,10 @@ $root: '.tmpl-hh-map';
   }
 
   &__map {
-    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
 
     svg {
       width: 100%;
