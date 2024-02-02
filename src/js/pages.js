@@ -1,4 +1,4 @@
-import {initSliders} from "@/utils/slider.js";
+import {initSliders} from "@/js/slider.js";
 
 export class Pages {
   constructor() {

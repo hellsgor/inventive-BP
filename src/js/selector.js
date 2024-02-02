@@ -1,4 +1,4 @@
-import {setBrand} from "@/utils/set-brand.js";
+import {setBrand} from "@/js/set-brand.js";
 
 class Selector {
   button = undefined;

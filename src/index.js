@@ -1,7 +1,7 @@
 import '@/assets/scss/index.scss'
-import {playButton} from "@/utils/play-button.js";
-import {initSelectors} from "@/utils/selector.js";
-import {initPages} from "@/utils/pages.js";
+import {playButton} from "@/js/play-button.js";
+import {initSelectors} from "@/js/selector.js";
+import {initPages} from "@/js/pages.js";
 
 // ---------------------------------
 
