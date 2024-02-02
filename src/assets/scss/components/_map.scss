@@ -73,6 +73,29 @@ $root: '.tmpl-hh-map';
       }
     }
   }
+
+  &__map {
+    width: 100%;
+
+    svg {
+      width: 100%;
+
+      g {
+        cursor: pointer;
+
+        @media(hover: hover) {
+          &:hover {
+            path {
+              fill: $accent;
+              mask: none;
+            }
+          }
+        }
+      }
+    }
+
+
+  }
 }
 
 @media (max-width: #{$mediaMD}) {
