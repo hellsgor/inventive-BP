@@ -49,6 +49,29 @@ $root: '.tmpl-hh-map';
 
   &__brand {
     max-width: 358px;
+    margin-bottom: 10px;
+  }
+
+  &__reset-button {
+    $transition-time: .3s;
+
+    padding: 10px 24px;
+    border: 1px solid $real-black;
+    border-radius: 9px;
+    font-size: 25px;
+    line-height: 120%;
+    background-color: $white;
+    color: $black;
+    cursor: pointer;
+    transition: background-color $transition-time ease-in-out, color $transition-time ease-in-out, border-color $transition-time ease-in-out;
+
+    @media(hover: hover) {
+      &:hover {
+        border-color: $accent;
+        background-color: $accent;
+        color: $white;
+      }
+    }
   }
 }
 
