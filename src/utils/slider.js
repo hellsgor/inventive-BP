@@ -172,8 +172,9 @@ const listSliders = [
 ];
 
 export const initSliders = () => {
-  return listSliders.map((i) => {
+  window.slidersTmpl = listSliders.map((i) => {
     const slider = new InitSlider(i);
     slider.customPagination && slider.prepareCustomPagination();
+    return slider;
   });
 };

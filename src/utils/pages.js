@@ -1,12 +1,11 @@
 import {initSliders} from "@/utils/slider.js";
 
 export class Pages {
-  constructor(sliders) {
+  constructor() {
     this.menuLinks = document.querySelectorAll('[data-menu-link]');
     this.pages = document.querySelectorAll('[data-id-page]');
     this.menu = document.querySelector('[data-menu]');
     this.top = document.querySelector('[data-hh-top]');
-    this.sliders = sliders ? sliders : null;
     this.init();
   }
 
@@ -48,7 +47,7 @@ export class Pages {
     localStorage.setItem('href', href);
 
     setTimeout(() => {
-      this.sliders?.forEach((item) => {
+      window.slidersTmpl?.forEach((item) => {
         item?.slider.destroy()
       })
       initSliders()
