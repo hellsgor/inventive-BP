@@ -24,7 +24,7 @@ export class Pages {
 
     this.menuLinks.forEach((link) => {
       link.addEventListener('click', (e) => {
-        const target = e.target.closest('article');
+        const target = e.target.closest('article') || e.target.closest('.tmpl-hh-back-button');
         const href = target.getAttribute('data-menu-link');
 
         this.changeHref(href);
@@ -39,7 +39,6 @@ export class Pages {
     });
 
     const activePage = document.querySelector(`[data-id-page="${href}"]`);
-    console.log('activePage', document.querySelector(`[data-id-page="${href}"]`));
     activePage.style.display = 'block';
     const activeLink = document.querySelector(`[data-menu-link="${href}"]`);
     activeLink.classList.add('tmpl-hh-header__list-link_active');

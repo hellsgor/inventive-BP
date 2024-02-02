@@ -4,7 +4,6 @@
 $root: '.tmpl-hh-back-button';
 
 #{$root} {
-  display: flex;
   margin-right: auto;
   align-items: center;
   column-gap: 20px;
@@ -24,10 +23,6 @@ $root: '.tmpl-hh-back-button';
     line-height: 99.99%;
     color: $black;
     transition: color .3s ease-in-out;
-  }
-
-  &_hidden {
-    display: none;
   }
 
   @media(hover: hover) {
