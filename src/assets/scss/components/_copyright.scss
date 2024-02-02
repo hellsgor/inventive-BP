@@ -1,0 +1,36 @@
+@import '@/assets/scss/variables/media';
+
+$root: '.tmpl-hh-copyright';
+
+#{$root} {
+  p {
+    opacity: 60%;
+    max-width: 670px;
+    font-size: 16px;
+    line-height: 120%;
+    color: $black;
+  }
+
+  span {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
+  }
+}
+
+@media (max-width: #{$mediaMD}) {
+  #{$root} {
+  }
+}
+
+@media (max-width: #{$mediaSM}) {
+  #{$root} {
+  }
+}
+
+@media (max-width: #{$mediaXS}) {
+  #{$root} {
+  }
+}
