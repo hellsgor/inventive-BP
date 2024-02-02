@@ -1,0 +1,106 @@
+@import '@/assets/scss/variables/media';
+
+$root: '.tmpl-hh-selector';
+
+@mixin generalStyles {
+  padding-left: 24px;
+  padding-right: 24px;
+  border: 1px solid $real-black;
+}
+
+@mixin textStyle {
+  font-size: 25px;
+  line-height: 120%;
+  color: $black;
+}
+
+#{$root} {
+  position: relative;
+
+  &__button {
+    @include generalStyles;
+
+    display: flex;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 12px;
+    outline: none;
+
+    border-radius: 9px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $white;
+    cursor: pointer;
+  }
+
+  &__button-text {
+    @include textStyle;
+  }
+
+  &__arrow {
+    width: 16px;
+    height: 16px;
+    padding-right: 8px;
+    transition: transform .15s ease-in-out;
+    pointer-events: none;
+
+    &_rotate {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__list {
+    @include generalStyles;
+    position: absolute;
+    top: 46px;
+    left: 0;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 16px;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+    border-top: none;
+    flex-direction: column;
+    list-style: none;
+    background-color: $white;
+    row-gap: 12px;
+
+    &_hidden {
+      display: none;
+    }
+  }
+
+  &__option {
+    @include textStyle;
+    cursor: pointer;
+    transition: color .3s ease-in-out;
+
+    &:first-child {
+      padding-top: 16px;
+      border-top: 1px solid $gray;
+    }
+
+    @media(hover: hover) {
+      &:hover {
+        color: $accent;
+      }
+    }
+  }
+}
+
+@media (max-width: #{$mediaMD}) {
+  #{$root} {
+  }
+}
+
+@media (max-width: #{$mediaSM}) {
+  #{$root} {
+  }
+}
+
+@media (max-width: #{$mediaXS}) {
+  #{$root} {
+  }
+}

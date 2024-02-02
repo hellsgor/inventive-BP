@@ -21,7 +21,15 @@ export const store = {
       modifier: 'reliability'
     },
   ],
-  brands: ['restore:', 'Samsung', 'Xiaomi', 'Street Beat', 'Hiker', 'Мир Кубиков', 'UNOde40'],
+  brands: [
+    {departmentCode: 'irg-112694-rest', name: 'restore:'},
+    {departmentCode: 'irg-112694-sams', name: 'Samsung'},
+    {departmentCode: 'irg-112694-Xiaomi', name: 'Xiaomi'},
+    {departmentCode: 'irg-112694-irgsb', name: 'Street Beat'},
+    {departmentCode: 'irg-112694-hiker', name: 'Hiker'},
+    {departmentCode: 'irg-112694-irgsb', name: 'Мир Кубиков'},
+    {departmentCode: 'irg-112694-uno', name: 'UNOde40'},
+  ],
   navigationCards: [
     {
       modifier: 'office',
@@ -43,5 +51,58 @@ export const store = {
       name: 'старт карьеры',
       description: 'розничные магазины, контактный центр, стажировки',
     },
-  ]
+  ],
+  regions: [
+    {
+      name: 'center',
+      nameRu: 'центр',
+      arias: '1817, 1828, 1716, 1844, 1754, 1859, 1771, 1880, 1890, 2019, 1, 1898, 1704, 1103, 1905, 1783, 1913, 1806',
+    },
+    {
+      name: 'south',
+      nameRu: 'юг',
+      arias: '1422, 1505, 1511, 1553, 1438, 2114, 1530, 130',
+    },
+    {
+      name: 'moscow',
+      nameRu: 'москва',
+      arias: '1',
+    },
+    {
+      name: 'povolzhye',
+      nameRu: 'поволжье',
+      arias: '1347, 1661, 1620, 1556, 1679, 1563, 1575, 1317, 1586, 1596, 1624, 1646, 1614, 1652',
+    },
+    {
+      name: 'north-west',
+      nameRu: 'северо-запад',
+      arias: '1008, 1739, 1020, 1077, 1041, 145, 1061, 1985, 1051, 1090, 2',
+    },
+    {
+      name: 'ural',
+      nameRu: 'урал',
+      arias: '1308, 1261, 1342, 1368, 1384, 1414',
+    },
+    {
+      name: 'siberia',
+      nameRu: 'сибирь',
+      arias: '1216, 1118, 1217, 1192, 1124, 1229, 1146, 1202, 1249, 1255, 1169, 1187',
+    },
+    {
+      name: 'far-east',
+      nameRu: 'дальний восток',
+      arias: '1932, 1941, 1943, 1946, 1948, 1174, 1960, 1975, 1982',
+    },
+  ],
+
+  regionPartialArias: {
+    center: '1817, 1828, 1716, 1844, 1754, 1859, 1771, 1880, 1890, 2019, 1, 1898, 1704, 1103, 1905, 1783, 1913, 1806',
+    south: '1422, 1505, 1511, 1553, 1438, 2114, 1530, 130',
+    moscow: '1',
+    povolzhye: '1347, 1661, 1620, 1556, 1679, 1563, 1575, 1317, 1586, 1596, 1624, 1646, 1614, 1652',
+    northWest: '1008, 1739, 1020, 1077, 1041, 145, 1061, 1985, 1051, 1090, 2',
+    ural: '1308, 1261, 1342, 1368, 1384, 1414',
+    siberia: '1216, 1118, 1217, 1192, 1124, 1229, 1146, 1202, 1249, 1255, 1169, 1187',
+    farEast: '1932, 1941, 1943, 1946, 1948, 1174, 1960, 1975, 1982',
+  }
 }
