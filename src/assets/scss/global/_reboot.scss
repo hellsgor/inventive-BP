@@ -6,8 +6,8 @@ body {
 }
 
 .hh-container {
-  margin: 0 auto;
   width: 1250px;
+  margin: 0 auto;
 }
 
 .tmpl-hh-brand-container * {
@@ -18,11 +18,12 @@ body {
 
 .tmpl-hh-brand-container {
   max-width: 1250px;
+  padding: 51px 0 45px;
 }
 
 .tmpl-hh-section {
-  font-family: 'Arial', sans-serif;
   overflow: hidden;
+  font-family: 'Arial', sans-serif;
   font-size: 16px;
   color: $black;
 
