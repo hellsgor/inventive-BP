@@ -54,3 +54,7 @@ export class Pages {
     }, 100);
   }
 }
+
+export function initPages() {
+  new Pages();
+}
