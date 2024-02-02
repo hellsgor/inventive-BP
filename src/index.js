@@ -1,7 +1,7 @@
 import '@/assets/scss/index.scss'
-import {initSliders} from "@/utils/slider.js";
-import {playButton} from "@/utils/play-button.js";
-import {initSelectors} from "@/utils/selector.js";
+import {playButton} from "@/js/play-button.js";
+import {initSelectors} from "@/js/selector.js";
+import {initPages} from "@/js/pages.js";
 
 // ---------------------------------
 
@@ -9,11 +9,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Utils
   // ---------------------------------
-  initSliders();
-  playButton()
-  initSelectors();
 
 
   // Modules
   // ---------------------------------
+  initPages();
+  playButton();
+  initSelectors();
 });

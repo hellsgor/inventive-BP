@@ -8,19 +8,37 @@
 </head>
 <body>
 <div class="hh-container">
-  <div class="tmpl-hh-brand-container">
+  <div class="tmpl-hh-brand-container" data-hh-top="">
     <div class="tmpl-hh-section">
       <div class="tmpl-hh-container">
-        {{> header}}
-        {{> navigation this.navigationCards}}
-        {{> ticker this.brands}}
-        {{> about}}
-        {{> why-we this.whyWeCards}}
-        {{> appreciate}}
-        {{> video}}
-        {{> social}}
-        {{> map}}
-        {{> copyright}}
+        <div class="tmpl-hh-page__main" data-id-page="#main">
+          {{> header}}
+          {{> navigation this.navigationCards}}
+          {{> ticker this.brands}}
+          {{> about}}
+          {{> why-we this.whyWeCards}}
+          {{> appreciate}}
+          {{> video}}
+          {{> social}}
+          {{> map}}
+          {{> copyright}}
+        </div>
+        <div class="tmpl-hh-page__start" data-id-page="#start">
+          {{> header}}
+          <span>start</span>
+        </div>
+        <div class="tmpl-hh-page__retail" data-id-page="#retail">
+          {{> header}}
+          <span>retail</span>
+        </div>
+        <div class="tmpl-hh-page__office" data-id-page="#office">
+          {{> header}}
+          <span>office</span>
+        </div>
+        <div class="tmpl-hh-page__digital" data-id-page="#digital">
+          {{> header}}
+          <span>digital</span>
+        </div>
       </div>
     </div>
   </div>
