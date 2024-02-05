@@ -87,9 +87,10 @@ $root: '.tmpl-hh-appreciate';
   }
 
   &__item {
-    display: inline-block;
+    display: inline-flex;
     padding: 28px 40px;
     border-bottom: 2px solid $black;
+    justify-content: flex-end;
     color: $black;
 
     &:last-child {
@@ -118,15 +119,147 @@ $root: '.tmpl-hh-appreciate';
 
 @media (max-width: #{$mediaMD}) {
   #{$root} {
+    padding-right: 0;
+    padding-left: 40px;
+    margin-bottom: 60px;
+    column-gap: 16px;
+
+    &__carousel {
+      flex-basis: 487px;
+    }
+
+    &__carousel-item {
+      width: 487px;
+      height: 573px;
+    }
+
+    &__title {
+      padding: 0;
+      row-gap: 21px;
+
+      h2 {
+        font-size: 70px;
+      }
+
+      img {
+        top: 5px;
+        right: -14px;
+        width: 24px;
+      }
+    }
+
+    &__arrow {
+      height: 50px;
+      padding-right: 21px;
+
+      svg {
+        width: 29px;
+        height: 50px;
+      }
+    }
+
+    &__item {
+      padding: 20px 40px;
+
+      span {
+        font-size: 32px;
+      }
+    }
   }
 }
 
 @media (max-width: #{$mediaSM}) {
   #{$root} {
+    padding-left: 0;
+    flex-direction: column-reverse;
+    row-gap: 37px;
+
+    &__carousel {
+      padding: 0 24px;
+      flex-basis: 100%;
+    }
+
+    &__carousel-wrapper {
+      width: 100%;
+      height: 496px;
+    }
+
+    &__carousel-item {
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &__text-content {
+      align-items: flex-end;
+      justify-content: flex-start;
+    }
+
+    &__title {
+      margin-right: 38px;
+    }
+
+    &__arrow {
+      padding-right: 7px;
+    }
+
+    &__item {
+      padding: 20px 24px 20px 26px;
+    }
   }
 }
 
-@media (max-width: #{$mediaXS}) {
+@media (max-width: #{$mediaXXS}) {
   #{$root} {
+    margin-bottom: 40px;
+    row-gap: 24px;
+
+    &__text-content {
+      padding-right: 16px;
+      row-gap: 20px;
+    }
+
+    &__title {
+      margin-right: 18px;
+      row-gap: 10px;
+
+      h2 {
+        font-size: 50px;
+      }
+
+      img {
+        top: 1px;
+        right: -18px;
+      }
+    }
+
+    &__arrow {
+      padding-right: 2px;
+    }
+
+    &__items {
+      row-gap: 8px;
+    }
+
+    &__item {
+      padding: 0;
+      border: none;
+
+      span {
+        font-size: 24px;
+      }
+    }
+
+    &__carousel {
+      padding-right: 16px;
+      padding-left: 16px;
+    }
+
+    &__carousel-wrapper {
+      width: 100%;
+      height: 228px;
+    }
   }
 }

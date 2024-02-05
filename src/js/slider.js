@@ -108,7 +108,7 @@ const listSliders = [
       loop: true,
       speed: 2000,
       allowTouchMove: false,
-      spaceBetween: 51,
+      spaceBetween: 0,
       centeredSlides: true,
       slidesPerView: 'auto',
     },

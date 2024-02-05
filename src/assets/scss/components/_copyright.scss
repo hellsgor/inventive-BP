@@ -24,15 +24,20 @@ $root: '.tmpl-hh-copyright';
 
 @media (max-width: #{$mediaMD}) {
   #{$root} {
+    p {
+      font-size: 12px;
+    }
   }
 }
 
 @media (max-width: #{$mediaSM}) {
   #{$root} {
+    padding: 0 24px;
   }
 }
 
-@media (max-width: #{$mediaXS}) {
+@media (max-width: #{$mediaXXS}) {
   #{$root} {
+    padding: 0 16px;
   }
 }
