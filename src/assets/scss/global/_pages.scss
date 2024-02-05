@@ -33,3 +33,14 @@ $root: '.tmpl-hh-page';
   #{$root} {
   }
 }
+
+@media (max-width: #{$mediaXXS}) {
+
+  #{$root} {
+    &__main {
+      .tmpl-hh-header__logo {
+        margin: 0 auto;
+      }
+    }
+  }
+}
