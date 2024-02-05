@@ -36,15 +36,61 @@ $root: '.tmpl-hh-why-we';
 
 @media (max-width: #{$mediaMD}) {
   #{$root} {
+    margin-bottom: 60px;
+
+    &__title {
+      margin-bottom: 40px;
+
+      h2 {
+        font-size: 70px;
+      }
+
+      img {
+        top: -9px;
+        right: -15px;
+        width: 24px;
+      }
+    }
+
+    &__wrapper {
+      overflow-x: scroll;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
   }
 }
 
 @media (max-width: #{$mediaSM}) {
   #{$root} {
+    &__title {
+      padding-left: 24px;
+    }
   }
 }
 
-@media (max-width: #{$mediaXS}) {
+@media (max-width: #{$mediaXXS}) {
   #{$root} {
+    margin-bottom: 40px;
+
+    &__title {
+      max-width: 193px;
+      padding-left: 16px;
+      margin-bottom: 20px;
+
+
+      h2 {
+        font-size: 50px;
+
+      }
+
+      img {
+        top: -1px;
+        right: -19px;
+      }
+    }
   }
 }

@@ -11,8 +11,10 @@ $root: '.tmpl-hh-why-we-card';
   display: flex;
   padding: 0 28px 29px;
   border-right: 1px solid $black;
-  flex: 0 0 calc(100% / 4);
+  flex-basis: calc(100% / 4);
   flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
   row-gap: 24px;
 
   &:first-child {
@@ -71,15 +73,53 @@ $root: '.tmpl-hh-why-we-card';
 
 @media (max-width: #{$mediaMD}) {
   #{$root} {
+    padding: 0 20px 38px;
+    flex-basis: 340px;
+
+    &__title {
+      font-size: 32px;
+    }
+
+    &__description {
+      width: 100%;
+      font-size: 20px;
+    }
   }
 }
 
 @media (max-width: #{$mediaSM}) {
   #{$root} {
+
+    &:first-child {
+      padding-left: 24px;
+    }
+
+    &:last-child {
+      padding-right: 24px;
+    }
   }
 }
 
-@media (max-width: #{$mediaXS}) {
+@media (max-width: #{$mediaXXS}) {
   #{$root} {
+    padding-bottom: 42px;
+    flex-basis: 185px;
+    row-gap: 16px;
+
+    &:first-child {
+      padding-left: 16px;
+    }
+
+    &:last-child {
+      padding-right: 16px;
+    }
+
+    &__title {
+      font-size: 24px;
+    }
+
+    &__description {
+      font-size: 16px;
+    }
   }
 }
