@@ -3,8 +3,9 @@
 $root: '.tmpl-hh-navigation';
 
 @mixin backgroundImage($image-path) {
-  background: linear-gradient(180deg, rgba(15, 23, 30, 0.00) 0%, rgba(15, 23, 30, 0.50) 100%), url($image-path), lightgray 50% / cover no-repeat;
-  background-size: contain;
+  background: linear-gradient(180deg, rgba(15, 23, 30, 0.00) 0%, rgba(15, 23, 30, 0.50) 100%), url($image-path), lightgray 50% no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 #{$root} {
@@ -15,7 +16,7 @@ $root: '.tmpl-hh-navigation';
   &__item {
     position: relative;
     overflow: hidden;
-    width: 625px;
+    width: calc(100% / 2);
     height: 426px;
     border-radius: 50px;
     color: $white;
@@ -95,6 +96,10 @@ $root: '.tmpl-hh-navigation';
     max-width: 393px;
     font-size: 100px;
     line-height: 100%;
+
+    img {
+      width: 30px;
+    }
   }
 
   &__item-description {
@@ -117,15 +122,121 @@ $root: '.tmpl-hh-navigation';
 
 @media (max-width: #{$mediaMD}) {
   #{$root} {
+    margin-bottom: 25px;
+
+    &__item {
+      height: 340px;
+
+      &_office {
+        #{$root}__item-decor {
+          top: 5px;
+          right: -18px;
+        }
+      }
+
+      &_digital {
+        #{$root}__item-decor {
+          top: -8px;
+          right: -13px;
+        }
+      }
+
+      &_retail {
+        #{$root}__item-decor {
+          top: -8px;
+          right: -13px;
+        }
+      }
+
+      &_start {
+        #{$root}__item-decor {
+          top: 4px;
+          right: 83px;
+        }
+      }
+    }
+
+    &__item-name {
+      bottom: 92px;
+      max-width: 280px;
+      font-size: 70px;
+
+      img {
+        width: 24px;
+      }
+    }
+
+    &__item-description {
+      top: 262px;
+      max-width: 312px;
+      font-size: 20px;
+    }
   }
 }
 
 @media (max-width: #{$mediaSM}) {
   #{$root} {
+    border-radius: 32px;
+
+    &__item {
+      height: 260px;
+
+      &_office {
+        #{$root}__item-decor {
+          top: 0;
+          right: -16px;
+        }
+      }
+
+      &_start {
+        #{$root}__item-decor {
+          top: 0;
+          right: 124px;
+        }
+      }
+    }
+
+    &__item-name {
+      bottom: 87px;
+      left: 24px;
+      font-size: 50px;
+    }
+
+    &__item-description {
+      top: 177px;
+      left: 24px;
+    }
   }
 }
 
 @media (max-width: #{$mediaXS}) {
   #{$root} {
+    &__item-description {
+      max-width: 280px;
+    }
+  }
+}
+
+@media (max-width: #{$mediaXXS}) {
+  #{$root} {
+    margin-bottom: 16px;
+
+    &__item {
+      height: 220px;
+      border-radius: 20px;
+    }
+
+    &__item-name {
+      bottom: 67px;
+      left: 12px;
+      font-size: 28px;
+    }
+
+    &__item-description {
+      top: 158px;
+      left: 12px;
+      max-width: 122px;
+      font-size: 12px;
+    }
   }
 }
