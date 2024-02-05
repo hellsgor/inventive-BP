@@ -36,16 +36,35 @@ body {
   .hh-container {
     width: 930px;
   }
+
+  .tmpl-hh-brand-container {
+    padding: 30px 0 34px;
+  }
 }
 
 @media (max-width: #{$mediaSM}) {
   .hh-container {
     width: 610px;
   }
+
+  .tmpl-hh-brand-container {
+    padding: 30px 0 23px
+  }
 }
 
 @media (max-width: #{$mediaXS}) {
   .hh-container {
     width: 100%;
+  }
+
+  .tmpl-hh-brand-container {
+    padding: 30px 15px 23px;
+  }
+}
+
+@media (max-width: #{$mediaXXS}) {
+  .tmpl-hh-brand-container {
+    padding-top: 20px;
+    padding-bottom: 16px;
   }
 }
