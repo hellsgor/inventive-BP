@@ -23,6 +23,7 @@ $root: '.tmpl-hh-ticker';
 
   &__slide {
     width: fit-content;
+    margin-right: 51px;
     font-size: 42px;
     line-height: 120%;
     color: $black;
@@ -37,15 +38,26 @@ $root: '.tmpl-hh-ticker';
 
 @media (max-width: #{$mediaMD}) {
   #{$root} {
-  }
-}
+    padding: 19px 0 26px;
+    margin-bottom: 25px;
 
-@media (max-width: #{$mediaSM}) {
-  #{$root} {
+    &__slide {
+      margin-right: 40px;
+      font-size: 32px;
+    }
   }
 }
 
 @media (max-width: #{$mediaXS}) {
   #{$root} {
+    padding: 16px 0 17px;
+    border-top: 1px solid $gray;
+    margin-bottom: 32px;
+
+
+    &__slide {
+      margin-right: 20px;
+      font-size: 20px;
+    }
   }
 }
