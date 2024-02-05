@@ -13,9 +13,14 @@ $root: '.tmpl-hh-back-button';
     width: 100%;
     max-width: 87px;
 
-    svg path {
-      transition: stroke .3s ease-in-out;
+    svg {
+      width: 100%;
+
+      path {
+        transition: stroke .3s ease-in-out;
+      }
     }
+
   }
 
   &__text {
@@ -44,12 +49,27 @@ $root: '.tmpl-hh-back-button';
 
 @media (max-width: #{$mediaMD}) {
   #{$root} {
-
   }
 }
 
 @media (max-width: #{$mediaSM}) {
   #{$root} {
+    column-gap: 13px;
 
+    &__text {
+      font-size: 32px;
+    }
+
+    &__arrow {
+      max-width: 50px;
+    }
+  }
+}
+
+@media (max-width: #{$mediaXXS}) {
+  #{$root} {
+    &__text {
+      display: none;
+    }
   }
 }
