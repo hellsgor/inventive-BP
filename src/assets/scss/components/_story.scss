@@ -52,14 +52,40 @@ $root: '.tmpl-hh-story';
       color: $accent;
     }
   }
-
-  &__arrow {
-
-  }
 }
 
 @media (max-width: #{$mediaMD}) {
   #{$root} {
+    column-gap: 20px;
+
+    &__photo {
+      $photo-size: 415px;
+      height: $photo-size;
+      border-radius: 30px;
+      flex-basis: $photo-size;
+    }
+
+    &__text-content {
+      flex-basis: 415px;
+      row-gap: 15px;
+
+      p {
+        font-size: 32px;
+      }
+    }
+
+    &__title {
+      padding-left: 30px;
+
+      h3 {
+        width: fit-content;
+        font-size: 32px;
+      }
+    }
+
+    &__arrow {
+      height: 29px;
+    }
   }
 }
 
