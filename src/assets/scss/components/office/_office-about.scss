@@ -1,0 +1,153 @@
+@import '@/assets/scss/variables/media';
+
+$root: '.tmpl-hh-office-about';
+
+#{$root} {
+    padding: 60px 0 60px 40px;
+    color: $black;
+    &__title {
+        margin-bottom: 60px;
+        font-size: 70px;
+        line-height: 100%;
+        position: relative;
+        display: inline-block;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -10px;
+            width: 24px;
+            height: 24px;
+            background: url('../../../images/decor-arrow.svg') center center/cover no-repeat;
+        }
+    }
+    &__items {
+        margin-bottom: 94px;
+        display: flex;
+        gap: 70px;
+    }
+    &__item {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        &-arrow {
+            width: 76px;
+            height: 42px;
+            object-fit: cover;
+        }
+        &-text {
+            font-size: 32px;
+            line-height: 100%;
+            span {
+                display: block;
+                color: $accent;
+            }
+        }
+    }
+    &__boxes {
+        margin-bottom: 99px;
+        display: flex;
+        gap: 20px;
+    }
+    &__box {
+        padding: 8px 28px;
+        font-size: 25px;
+        line-height: 120%;
+        border-radius: 9px;
+        border: 1px solid $black;
+        span {
+            font-weight: 700;
+        }
+    }
+    &__bottom {
+        color: $accent;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 120%;
+    }
+}
+
+@media (max-width: #{$mediaMD}) {
+  #{$root} {
+
+    &__items {
+        margin-bottom: 60px;
+        gap: 65px;
+    }
+    &__item-arrow {
+        width: 56px;
+        height: 32px;
+    }
+    &__boxes {
+        margin-bottom: 60px;
+        gap: 15px;
+    }
+    &__box {
+        font-size: 20px;
+    }
+    &__bottom {
+        font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: #{$mediaSM}) {
+  #{$root} {
+    padding: 60px 24px;
+    &__items {
+        flex-direction: column;
+        gap: 32px;
+    }
+    &__boxes {
+        flex-direction: column;
+        gap: 16px;
+    }
+    &__box {
+        width: 410px;
+    }
+  }
+}
+
+@media (max-width: #{$mediaXS}) {
+  #{$root} {
+    padding: 40px 16px;
+    &__title {
+        margin-bottom: 40px;
+        font-size: 50px;
+    }
+    &__items {
+        margin-bottom: 40px;
+        gap: 20px;
+    }
+    &__item-text {
+        font-size: 20px;
+        span {
+            display: inline;
+            font-weight: 400;
+        }
+    }
+    &__boxes {
+        margin-bottom: 40px;
+        gap: 8px;
+    }
+    &__box {
+        font-size: 16px;
+        text-align: center;
+        width: 100%;
+    }
+    &__bottom {
+        font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 411px) {
+    .tmpl-hh-office-about__title {
+        max-width: 213px;
+    }
+    .tmpl-hh-office-about__title:after {
+        right: 0;
+        width: 20px;
+        height: 20px;
+    }
+}

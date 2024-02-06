@@ -1,0 +1,119 @@
+@import '@/assets/scss/variables/media';
+
+$root: '.tmpl-hh-office-top';
+
+#{$root} {
+    padding-top: 499px;
+    height: 852px;
+    border-radius: 50px;
+    background: url('../../../images/office/office.png') center center/cover no-repeat;
+    &__title {
+        margin-bottom: 109px;
+        padding: 26px 60px 26px 40px;
+        width: 344px;
+        font-size: 100px;
+        line-height: 100%;
+        color: $white;
+        background-color: $black;
+        display: inline-block;
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 19px;
+            right: 31px;
+            background: url('../../../images/decor-arrow.svg') center center/cover no-repeat;
+            width: 30px;
+            height: 30px;
+        }
+    }
+    &__list {
+        padding-left: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        &-item {
+            font-size: 42px;
+            line-height: 120%;
+            color: $white
+        }
+    }
+}
+
+@media (max-width: #{$mediaMD}) {
+  #{$root} {
+    padding-top: 366px;
+    height: 634px;
+    border-radius: 50px;
+    &__title {
+        margin-bottom: 60px;
+        padding: 30px 68px 30px 40px;
+        font-size: 70px; 
+        width: 279px;
+        &:after {
+            top: 34px;
+            right: 48px;
+            width: 24px;
+            height: 24px;
+        }
+    }
+    &__list {
+        gap: 24px;
+        &-item {
+            font-size: 32px;
+        }
+    }
+  }
+}
+
+@media (max-width: #{$mediaSM}) {
+  #{$root} {
+    padding-top: 388px;
+    height: 606px;
+    border-radius: 50px;
+    &__title {
+        margin-bottom: 24px;
+        padding: 0;
+        padding-left: 24px;
+        font-size: 70px; 
+        width: auto;
+        background-color: transparent;
+        &:after {
+            top: 6px;
+            right: -25px;
+        }
+    }
+    &__list {
+        padding-left: 24px;
+        gap: 16px;
+    }
+  }
+  }
+
+
+@media (max-width: #{$mediaXS}) {
+  #{$root} {
+    padding-top: 307px;
+    height: 516px;
+    border-radius: 20px;
+    &__title {
+        margin-bottom: 16px;
+        padding-left: 16px;
+        font-size: 50px; 
+        &:after {
+            top: 2px;
+            right: -13px;
+            width: 20px;
+            height: 20px;
+        }
+    }
+    &__list {
+        padding-left: 16px;
+        flex-direction: column;
+        gap: 6px;
+        &-item {
+          font-size: 16px;
+        }
+    }
+  }
+}

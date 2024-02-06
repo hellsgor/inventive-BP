@@ -1,4 +1,4 @@
-import Swiper, {Autoplay, Pagination} from 'swiper';
+import Swiper, {Autoplay, EffectFade, Pagination} from 'swiper';
 
 class InitSlider {
   classSlider = '';
@@ -167,6 +167,28 @@ const listSliders = [
       containerID: 'tmpl-hh-social-carousel-custom-pagination',
       itemsClass: 'tmpl-hh-social__carousel-custom-bullet',
       eventName: 'click',
+    },
+  },
+  {
+    classSlider: '.tmpl-hh-office-slider',
+    settingsSlider: {
+      modules: [Autoplay, Pagination, EffectFade],
+      pagination: {
+        el: '.tmpl-hh-office-slider__pagination',
+        bulletClass: 'tmpl-hh-carousel-bullet',
+        bulletActiveClass: 'tmpl-hh-carousel-bullet_active',
+        clickable: true,
+        type: 'bullets',
+      },
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      effect: 'fade',
+      fadeEffect: {crossFade: true},
+      loop: true,
+      allowTouchMove: true,
+      slidesPerView: 1,
     },
   },
 ];

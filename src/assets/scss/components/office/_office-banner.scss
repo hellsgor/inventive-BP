@@ -1,0 +1,175 @@
+@import '@/assets/scss/variables/media';
+
+$root: '.tmpl-hh-office-banner';
+
+#{$root} {
+  padding: 77px 40px 70px;
+  background-color: $black;
+  color: $white;
+
+  &__top {
+    margin-bottom: 139px;
+    text-align: right;
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: 30px;
+    font-size: 100px;
+    font-weight: 400;
+    line-height: 100%;
+
+    &:after {
+      position: absolute;
+      top: -17px;
+      width: 30px;
+      height: 30px;
+      content: '';
+
+    }
+
+    &_l {
+      max-width: 1102px;
+      margin-right: 0;
+      margin-left: auto;
+
+      &:after {
+        left: 0;
+        background: url('../../../images/decor-arrow-left.svg') center center/cover no-repeat;
+        background-size: cover;
+      }
+    }
+
+    &_r {
+      max-width: 938px;
+
+      &:after {
+        right: 0;
+        background: url('../../../images/decor-arrow.svg') center center/cover no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+
+  &__text {
+    max-width: 1021px;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 120%;
+
+    &_w {
+      max-width: 963px;
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
+}
+
+@media (max-width: #{$mediaMD}) {
+  #{$root} {
+    padding: 61px 40px 50px;
+
+    &__top {
+      margin-bottom: 121px;
+    }
+
+    &__title {
+      margin-bottom: 24px;
+      font-size: 70px;
+
+      &:after {
+        width: 24px;
+        height: 24px;
+      }
+
+      &_l {
+        max-width: 770px;
+
+      }
+
+      &_r {
+        max-width: 653px;
+
+      }
+    }
+
+    &__text {
+      max-width: 690px;
+      font-size: 20px;
+
+      &_w {
+        max-width: 815px;
+        margin-right: 0;
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: #{$mediaSM}) {
+  #{$root} {
+    padding: 59px 24px 50px;
+
+    &__title {
+      max-width: 100%;
+
+      &_l:after {
+        left: 198px;
+
+      }
+
+      &_r:after {
+        top: 0;
+        right: 199px;
+
+      }
+    }
+
+    &__text {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: #{$mediaXS}) {
+  #{$root} {
+    padding: 33px 15px 24px;
+
+    &__top {
+      margin-bottom: 55px;
+    }
+
+    &__title {
+      font-size: 36px;
+
+      &:after {
+        width: 20px;
+        height: 20px;
+      }
+
+      &_l:after {
+        top: -9px;
+        right: 172px;
+        left: auto;
+
+      }
+
+      &_r:after {
+        top: -6px;
+        right: auto;
+        left: 317px;
+
+      }
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .tmpl-hh-office-banner__title_r:after {
+    left: 170px;
+  }
+}
