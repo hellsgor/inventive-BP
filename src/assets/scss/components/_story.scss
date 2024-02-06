@@ -173,7 +173,40 @@ $root: '.tmpl-hh-story';
   }
 }
 
-@media (max-width: #{$mediaXS}) {
+@media (max-width: #{$mediaXXS}) {
   #{$root} {
+    &:nth-child(odd) {
+      #{$root}__arrow {
+        left: 208px;
+      }
+    }
+
+    &:nth-child(even) {
+      #{$root}__arrow {
+        left: 0;
+      }
+    }
+
+    &__arrow {
+      top: 81px;
+    }
+
+    &__photo {
+      $photo-size: 192px;
+      height: $photo-size;
+      flex-basis: $photo-size;
+    }
+
+    &__title {
+      h3 {
+        font-size: 20px;
+      }
+    }
+
+    &__text-content {
+      p {
+        font-size: 20px;
+      }
+    }
   }
 }
