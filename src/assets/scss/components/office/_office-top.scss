@@ -3,117 +3,135 @@
 $root: '.tmpl-hh-office-top';
 
 #{$root} {
-    padding-top: 499px;
-    height: 852px;
-    border-radius: 50px;
-    background: url('../../../images/office/office.png') center center/cover no-repeat;
-    &__title {
-        margin-bottom: 109px;
-        padding: 26px 60px 26px 40px;
-        width: 344px;
-        font-size: 100px;
-        line-height: 100%;
-        color: $white;
-        background-color: $black;
-        display: inline-block;
-        position: relative;
-        &:after {
-            content: '';
-            position: absolute;
-            top: 19px;
-            right: 31px;
-            background: url('../../../images/decor-arrow.svg') center center/cover no-repeat;
-            width: 30px;
-            height: 30px;
-        }
+  height: 852px;
+  padding-top: 499px;
+  border-radius: 50px;
+  margin-bottom: 35px;
+  background: url('../../../images/office/office.png') center center/cover no-repeat;
+
+  &__title {
+    position: relative;
+    display: inline-block;
+    width: 344px;
+    padding: 26px 60px 26px 40px;
+    margin-bottom: 109px;
+    font-size: 100px;
+    line-height: 100%;
+    background-color: $black;
+    color: $white;
+
+    &:after {
+      position: absolute;
+      top: 19px;
+      right: 31px;
+      width: 30px;
+      height: 30px;
+      background: url('../../../images/decor-arrow.svg') center center/cover no-repeat;
+      content: '';
     }
-    &__list {
-        padding-left: 40px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-        &-item {
-            font-size: 42px;
-            line-height: 120%;
-            color: $white
-        }
+  }
+
+  &__list {
+    display: flex;
+    padding-left: 40px;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    &-item {
+      font-size: 42px;
+      line-height: 120%;
+      color: $white
     }
+  }
 }
 
 @media (max-width: #{$mediaMD}) {
   #{$root} {
-    padding-top: 366px;
     height: 634px;
+    padding-top: 366px;
     border-radius: 50px;
+    margin-bottom: 25px;
+
     &__title {
-        margin-bottom: 60px;
-        padding: 30px 68px 30px 40px;
-        font-size: 70px; 
-        width: 279px;
-        &:after {
-            top: 34px;
-            right: 48px;
-            width: 24px;
-            height: 24px;
-        }
+      width: 279px;
+      padding: 30px 68px 30px 40px;
+      margin-bottom: 60px;
+      font-size: 70px;
+
+      &:after {
+        top: 34px;
+        right: 48px;
+        width: 24px;
+        height: 24px;
+      }
     }
+
     &__list {
-        gap: 24px;
-        &-item {
-            font-size: 32px;
-        }
+      gap: 24px;
+
+      &-item {
+        font-size: 32px;
+      }
     }
   }
 }
 
 @media (max-width: #{$mediaSM}) {
   #{$root} {
-    padding-top: 388px;
     height: 606px;
+    padding-top: 388px;
     border-radius: 50px;
+
     &__title {
-        margin-bottom: 24px;
-        padding: 0;
-        padding-left: 24px;
-        font-size: 70px; 
-        width: auto;
-        background-color: transparent;
-        &:after {
-            top: 6px;
-            right: -25px;
-        }
+      width: auto;
+      padding: 0;
+      padding-left: 24px;
+      margin-bottom: 24px;
+      font-size: 70px;
+      background-color: transparent;
+
+      &:after {
+        top: 6px;
+        right: -25px;
+      }
     }
+
     &__list {
-        padding-left: 24px;
-        gap: 16px;
+      padding-left: 24px;
+      gap: 16px;
     }
   }
-  }
+}
 
 
 @media (max-width: #{$mediaXS}) {
   #{$root} {
-    padding-top: 307px;
     height: 516px;
+    padding-top: 307px;
     border-radius: 20px;
+    margin-bottom: 17px;
+
     &__title {
-        margin-bottom: 16px;
-        padding-left: 16px;
-        font-size: 50px; 
-        &:after {
-            top: 2px;
-            right: -13px;
-            width: 20px;
-            height: 20px;
-        }
+      padding-left: 16px;
+      margin-bottom: 16px;
+      font-size: 50px;
+
+      &:after {
+        top: 2px;
+        right: -13px;
+        width: 20px;
+        height: 20px;
+      }
     }
+
     &__list {
-        padding-left: 16px;
-        flex-direction: column;
-        gap: 6px;
-        &-item {
-          font-size: 16px;
-        }
+      padding-left: 16px;
+      flex-direction: column;
+      gap: 6px;
+
+      &-item {
+        font-size: 16px;
+      }
     }
   }
 }
