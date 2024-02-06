@@ -227,6 +227,14 @@ $root: '.tmpl-hh-map';
       text-align: center;
     }
 
+    &__brand {
+      max-width: unset;
+
+      .tmpl-hh-selector__list {
+        height: 128px;
+      }
+    }
+
     &__reset-button {
       padding: 8px 16px;
       font-size: 16px;
