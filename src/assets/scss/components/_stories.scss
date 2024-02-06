@@ -1,0 +1,51 @@
+@import '@/assets/scss/variables/media';
+@import '@/assets/scss/variables/colors';
+
+$root: '.tmpl-hh-stories';
+
+#{$root} {
+  padding: 0 40px 40px;
+
+  &__title {
+    position: relative;
+    width: fit-content;
+    margin-bottom: 50px;
+    margin-left: auto;
+
+    h2 {
+      font-size: 100px;
+      font-weight: 400;
+      text-align: right;
+      line-height: 100%;
+    }
+
+    p {
+      font-size: 25px;
+      text-align: right;
+      line-height: 115%;
+    }
+
+    img {
+      position: absolute;
+      top: -7px;
+      left: -68px;
+      width: 30px;
+      transform: rotate(-90deg);
+    }
+  }
+}
+
+@media (max-width: #{$mediaMD}) {
+  #{$root} {
+  }
+}
+
+@media (max-width: #{$mediaSM}) {
+  #{$root} {
+  }
+}
+
+@media (max-width: #{$mediaXS}) {
+  #{$root} {
+  }
+}

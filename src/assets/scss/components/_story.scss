@@ -1,0 +1,74 @@
+@import '@/assets/scss/variables/media';
+@import '@/assets/scss/variables/colors';
+
+$root: '.tmpl-hh-story';
+
+#{$root} {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  column-gap: 82px;
+
+  &:nth-child(odd) {
+    #{$root}__arrow {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__photo {
+    $photo-size: 518px;
+    height: $photo-size;
+    border-radius: 30px;
+    flex: 0 0 $photo-size;
+    object-fit: cover;
+    object-position: center;
+  }
+
+
+  &__text-content {
+    display: flex;
+    flex: 0 0 570px;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: right;
+    row-gap: 18px;
+
+    p {
+      font-size: 42px;
+      line-height: 100%;
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    h3 {
+      font-size: 42px;
+      font-weight: 400;
+      line-height: 100%;
+      color: $accent;
+    }
+  }
+
+  &__arrow {
+
+  }
+}
+
+@media (max-width: #{$mediaMD}) {
+  #{$root} {
+  }
+}
+
+@media (max-width: #{$mediaSM}) {
+  #{$root} {
+  }
+}
+
+@media (max-width: #{$mediaXS}) {
+  #{$root} {
+  }
+}

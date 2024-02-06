@@ -21,6 +21,7 @@ export const store = {
       modifier: 'reliability'
     },
   ],
+
   brands: [
     {departmentCode: 'irg-112694-rest', name: 'restore:'},
     {departmentCode: 'irg-112694-sams', name: 'Samsung'},
@@ -30,6 +31,7 @@ export const store = {
     {departmentCode: 'irg-112694-irgsb', name: 'Мир Кубиков'},
     {departmentCode: 'irg-112694-uno', name: 'UNOde40'},
   ],
+
   navigationCards: [
     {
       modifier: 'office',
@@ -52,6 +54,7 @@ export const store = {
       description: 'розничные магазины, контактный центр, стажировки',
     },
   ],
+
   regions: [
     {
       name: 'center',
@@ -104,5 +107,15 @@ export const store = {
     ural: '1308, 1261, 1342, 1368, 1384, 1414',
     siberia: '1216, 1118, 1217, 1192, 1124, 1229, 1146, 1202, 1249, 1255, 1169, 1187',
     farEast: '1932, 1941, 1943, 1946, 1948, 1174, 1960, 1975, 1982',
+  },
+
+  trueStories: {
+    office: [
+      {
+        title: 'Даша, менеджер по подбору персонала',
+        story: '“Каждый день в Inventive — драйв, который заряжает на новые свершения и достижения. А удалёнка на неделе — приятный бонус после динамичных дней 😊”',
+        photo: '/assets/images/stories/dasha.jpg',
+      }
+    ]
   }
 }
