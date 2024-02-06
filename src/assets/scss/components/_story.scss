@@ -13,13 +13,54 @@ $root: '.tmpl-hh-story';
     #{$root}__arrow {
       transform: rotate(180deg);
     }
+
+    #{$root}__title {
+      margin-right: 0;
+      margin-left: auto;
+
+      @media (max-width: #{$mediaSM}) {
+        margin-left: unset;
+      }
+    }
+  }
+
+  &:nth-child(even) {
+    #{$root}__photo {
+      order: 2;
+
+      @media (max-width: #{$mediaSM}) {
+        margin-left: auto;
+        order: unset;
+      }
+    }
+
+    #{$root}__text-content {
+      text-align: left;
+
+      @media (max-width: #{$mediaSM}) {
+        text-align: right;
+      }
+    }
+
+    #{$root}__arrow {
+      order: 2;
+    }
+
+    #{$root}__title {
+      @media (max-width: #{$mediaSM}) {
+        margin-right: 0;
+        margin-left: auto;
+      }
+    }
   }
 
   &__photo {
     $photo-size: 518px;
     height: $photo-size;
     border-radius: 30px;
-    flex: 0 0 $photo-size;
+    flex-basis: $photo-size;
+    flex-grow: 0;
+    flex-shrink: 0;
     object-fit: cover;
     object-position: center;
   }
@@ -27,8 +68,10 @@ $root: '.tmpl-hh-story';
 
   &__text-content {
     display: flex;
-    flex: 0 0 570px;
+    flex-basis: 570px;
     flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 0;
     justify-content: flex-end;
     text-align: right;
     row-gap: 18px;
@@ -41,6 +84,8 @@ $root: '.tmpl-hh-story';
 
   &__title {
     display: flex;
+    margin-right: auto;
+    margin-left: 0;
     align-items: center;
     justify-content: space-between;
 
@@ -61,7 +106,6 @@ $root: '.tmpl-hh-story';
     &__photo {
       $photo-size: 415px;
       height: $photo-size;
-      border-radius: 30px;
       flex-basis: $photo-size;
     }
 
@@ -75,7 +119,7 @@ $root: '.tmpl-hh-story';
     }
 
     &__title {
-      padding-left: 30px;
+      max-width: 385px;
 
       h3 {
         width: fit-content;
@@ -91,6 +135,41 @@ $root: '.tmpl-hh-story';
 
 @media (max-width: #{$mediaSM}) {
   #{$root} {
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    row-gap: 24px;
+
+    &:nth-child(odd) {
+      #{$root}__arrow {
+        left: 465px;
+      }
+    }
+
+    &:nth-child(even) {
+      #{$root}__arrow {
+        left: 47px;
+      }
+    }
+
+    &__text-content {
+      flex-basis: 100%;
+      text-align: unset;
+    }
+
+    &__title {
+      padding-left: 0;
+
+      h3 {
+        width: 100%;
+      }
+    }
+
+    &__arrow {
+      position: absolute;
+      top: 193px;
+    }
   }
 }
 

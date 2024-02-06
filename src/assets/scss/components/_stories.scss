@@ -6,6 +6,10 @@ $root: '.tmpl-hh-stories';
 #{$root} {
   padding: 0 40px 40px;
 
+  &:not(:last-child) {
+    margin-bottom: 70px;
+  }
+
   &__title {
     position: relative;
     width: fit-content;
@@ -33,10 +37,20 @@ $root: '.tmpl-hh-stories';
       transform: rotate(-90deg);
     }
   }
+
+  &__stories {
+    display: flex;
+    flex-direction: column;
+    row-gap: 64px;
+  }
 }
 
 @media (max-width: #{$mediaMD}) {
   #{$root} {
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+
     &__title {
       margin-bottom: 4px;
 
@@ -50,19 +64,39 @@ $root: '.tmpl-hh-stories';
 
       img {
         top: -8px;
-        left: -48px;
+        left: -72px;
         width: 24px;
       }
+    }
+
+    &__stories {
+      row-gap: 50px;
     }
   }
 }
 
 @media (max-width: #{$mediaSM}) {
   #{$root} {
+    padding: 0 24px 24px;
+
+    &__title {
+      margin-bottom: 40px;
+
+      h2 {
+        margin-bottom: 15px;
+      }
+    }
   }
 }
 
-@media (max-width: #{$mediaXS}) {
+@media (max-width: #{$mediaXXS}) {
   #{$root} {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+
+    &__stories {
+      row-gap: 32px;
+    }
   }
 }
