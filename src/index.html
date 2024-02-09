@@ -1,73 +1,80 @@
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-      name="viewport"
-    />
-    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
-    <title>Inventive</title>
-  </head>
-  <body>
-    <div class="hh-container">
-      <div class="tmpl-hh-brand-container" data-hh-top="">
-        <div class="tmpl-hh-section">
-          <div class="tmpl-hh-container">
-            <div class="tmpl-hh-page__main" data-id-page="#main">
-              {{> header}} {{> navigation this.navigationCards}} {{> ticker
-              this.brands}} {{> about}} {{> why-we this.whyWeCards}} {{>
-              appreciate}} {{> social}} {{> map}} {{> copyright}}
-            </div>
-            <div class="tmpl-hh-page__start" data-id-page="#start">
-              {{> header}} {{> start/start-top}} {{> ticker this.brands}} {{>
-              office/office-about}} {{>start/start-banner}} {{>
-              start/start-stories}} {{> map-start}}
-            </div>
-            <div class="tmpl-hh-page__retail" data-id-page="#retail">
-              {{> header}} {{> retail/retail-top}} {{> ticker this.brands}} {{>
-              office/office-about}} {{> retail/retail-banner}} {{>
-              retail/retail-stories}} {{> map-reteil}}
-            </div>
-            <div class="tmpl-hh-page__office" data-id-page="#office">
-              {{> header}} {{> office/office-top}} {{> ticker this.brands}} {{>
-              office/office-about}} {{> office/office-banner}} {{>
-              office/office-slider}} {{> office/office-stories}}
-            </div>
-            <div class="tmpl-hh-page__digital" data-id-page="#digital">
-              {{> header}} {{> digital/digital-top}} {{> ticker this.brands}}
-              {{> office/office-about}} {{> digital/digital-banner}} {{>
-              digital/digital-slider}} {{> digital/digital-stories}}
-            </div>
-          </div>
+<head>
+  <meta charset="UTF-8"/>
+  <meta
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    name="viewport"
+  />
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>Inventive</title>
+</head>
+<body>
+<div class="hh-container">
+  <div class="tmpl-hh-brand-container" data-hh-top="">
+    <div class="tmpl-hh-section">
+      <div class="tmpl-hh-container">
+        <div class="tmpl-hh-page__main" data-id-page="#main">
+          {{> header}}
+          {{> navigation this.navigationCards}}
+          {{> ticker this.brands}}
+          {{> about}}
+          {{> why-we this.whyWeCards}}
+          {{> appreciate}}
+          {{> video coverModifier='tmpl-hh-video__cover_main' }}
+          {{> social}}
+          {{> map}}
+          {{> copyright}}
+        </div>
+        <div class="tmpl-hh-page__start" data-id-page="#start">
+          {{> header}} {{> start/start-top}} {{> ticker this.brands}} {{>
+          office/office-about}} {{>start/start-banner}} {{>
+          start/start-stories}} {{> video coverModifier='tmpl-hh-video__cover_start-and-retail' }} {{> map-start}}
+        </div>
+        <div class="tmpl-hh-page__retail" data-id-page="#retail">
+          {{> header}} {{> retail/retail-top}} {{> ticker this.brands}} {{>
+          office/office-about}} {{> retail/retail-banner}} {{>
+          retail/retail-stories}} {{> video coverModifier='tmpl-hh-video__cover_start-and-retail' }} {{> map-reteil}}
+        </div>
+        <div class="tmpl-hh-page__office" data-id-page="#office">
+          {{> header}} {{> office/office-top}} {{> ticker this.brands}} {{>
+          office/office-about}} {{> office/office-banner}} {{>
+          office/office-slider}} {{> office/office-stories}}
+        </div>
+        <div class="tmpl-hh-page__digital" data-id-page="#digital">
+          {{> header}} {{> digital/digital-top}} {{> ticker this.brands}}
+          {{> office/office-about}} {{> digital/digital-banner}} {{>
+          digital/digital-slider}} {{> digital/digital-stories}}
         </div>
       </div>
+    </div>
+  </div>
 
-      <div
-        class="tmpl_hh_vacancy_block"
-        id="tmpl_hh_vacancy_block"
-        style="
+  <div
+    class="tmpl_hh_vacancy_block"
+    id="tmpl_hh_vacancy_block"
+    style="
           width: 100%;
           max-width: 1250px;
           margin: 0 auto 25px auto;
           position: relative;
           padding: 30px 0 0;
         "
-      >
-        <div style="position: absolute; right: 0; top: 15px; z-index: 10">
-          <hht:employer-insider xmlns:hht="http://hh.ru/development/hht" />
-        </div>
-        <h3
-          class="b-subtitle b-employerpage-vacancies-title"
-          style="font-weight: normal; font-size: 18px; margin: 20px 0"
-        >
-          Вакансии компании «
-          <hht:employer-title />
-          »<span class="tmpl_hh_vac_title"></span>
-          <hht:employer-confirmed />
-        </h3>
-        <hht:vacancies filtered="true" />
-      </div>
+  >
+    <div style="position: absolute; right: 0; top: 15px; z-index: 10">
+      <hht:employer-insider xmlns:hht="http://hh.ru/development/hht"/>
     </div>
-    <script src="index.js" type="module"></script>
-  </body>
+    <h3
+      class="b-subtitle b-employerpage-vacancies-title"
+      style="font-weight: normal; font-size: 18px; margin: 20px 0"
+    >
+      Вакансии компании «
+      <hht:employer-title/>
+      »<span class="tmpl_hh_vac_title"></span>
+      <hht:employer-confirmed/>
+    </h3>
+    <hht:vacancies filtered="true"/>
+  </div>
+</div>
+<script src="index.js" type="module"></script>
+</body>
 </html>
