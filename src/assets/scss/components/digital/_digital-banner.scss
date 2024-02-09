@@ -1,0 +1,69 @@
+@import '@/assets/scss/variables/media';
+
+$root: '.tmpl-hh-digital-banner';
+
+#{$root} {
+    &__title_l {
+        &:after {
+            left: auto;
+            right: 405px;
+        }
+    }
+    &__title_r {
+        max-width: 100%;
+        &:after {
+            right: auto;
+            left: 82%;
+            top: 0;
+        }
+    }
+    &__text_w {
+        max-width: 623px;
+    }
+}
+
+@media (max-width: #{$mediaMD}) {
+  #{$root} {
+    &__title_l:after {
+        right: 283px;
+        top: -11px;
+    }
+    &__title_r:after {
+        left: 79%;
+    }
+  }
+}
+
+@media (max-width: #{$mediaSM}) {
+  #{$root} {
+    &__title_r:after {
+        left: 84%;
+    }
+  }
+}
+
+@media (max-width: #{$mediaXS}) {
+  #{$root} {
+    &__title_l:after {
+        right: 142px;
+        top: -9px;
+    }
+    &__title_r:after {
+        left: auto;
+        right: 0;
+        top: -5px;
+    }
+  }
+}
+
+@media (max-width: 424px) {
+    .tmpl-hh-digital-banner__title_r:after {
+        right: 57px;
+    }
+}
+
+@media (max-width: 374px) {
+    .tmpl-hh-digital-banner__title_r:after {
+        right: 0;
+    }
+}

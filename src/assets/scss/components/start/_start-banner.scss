@@ -1,0 +1,75 @@
+@import '@/assets/scss/variables/media';
+
+$root: '.tmpl-hh-start-banner';
+
+#{$root} {
+    &__title_l {
+        width: 935px;
+        &:after {
+            left: -14px;
+            
+        }
+    }
+    &__title_r {
+        max-width: 100%;
+        span {
+            display: block;
+        }
+        &:after {
+            right: auto;
+            left: 86%;
+            top: 106px;
+        }
+    }
+    &__text_w {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: #{$mediaMD}) {
+  #{$root} {
+    &__title_l {
+        width: 655px;
+    }
+    &__title_r:after {
+        left: 83%;
+        top: 71px;
+    }
+  }
+}
+
+@media (max-width: #{$mediaSM}) {
+  #{$root} {
+    &__title_l {
+        width: 368px;
+        &:after {
+            left: -5px;
+            top: -9px;
+        }
+    }
+    &__title_r:after {
+        left: 82%;
+        top: -9px;
+    }
+
+  }
+}
+
+@media (max-width: #{$mediaXS}) {
+  #{$root} {
+    &__title_l {
+        width: 191px;
+    }
+    &__title_r:after {
+        left: 235px;
+    }
+  }
+}
+
+@media (max-width: 424px) {
+
+}
+
+@media (max-width: 374px) {
+
+}

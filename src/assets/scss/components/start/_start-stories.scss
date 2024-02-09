@@ -1,0 +1,220 @@
+@import '@/assets/scss/variables/media';
+
+$root: '.tmpl-hh-start-stories';
+
+#{$root} {
+    padding: 70px 40px;
+    color: $black;
+    &__title {
+        margin-bottom: 5px;
+        font-size: 100px;
+        font-weight: 400;
+        line-height: 100%;
+        text-align: right;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            right: 47%;
+            background: url('https://hhcdn.ru/ichameleon/340194.svg') center center/cover no-repeat;
+            width: 24px;
+            height: 24px;
+        }
+    }
+    &__subtitle {
+        text-align: right;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 29px;
+    }
+    &__item {
+        margin-top: -45px;
+        display: flex;
+        align-items: flex-end;
+        gap: 82px;
+        &_r {
+            text-align: right;
+        }
+        &:last-child {
+            margin-top: 0;
+            margin-top: 64px;
+        }
+        &-title {
+            margin-bottom: 18px;
+            color: $accent;
+            font-size: 42px;
+            font-weight: 400;
+            line-height: 99.99%;
+            span {
+                display: block;
+            }
+        }
+        &-text {
+            font-size: 42px;
+            font-weight: 400;
+            line-height: 99.99%;
+        }
+    }
+    &__inner {
+        position: relative;
+    }
+    &__arrow {
+        position: absolute;
+        bottom: 196px;
+        &_r {
+            right: -126px;
+            transform: translateX(50%);
+        }
+        &_l {
+            left: -126px;
+            transform: translateX(-50%);
+        }
+    }
+    &__img {
+        width: 518px;
+        height: 518px;
+        object-fit: cover;
+        border-radius: 30px;
+    }
+}
+
+@media (max-width: #{$mediaMD}) {
+  #{$root} {
+    padding: 68px 40px 60px;
+
+    &__title {
+        font-size: 70px;
+        &:before {
+            top: -9px;
+            right: 45%;
+        }
+    }
+    &__subtitle {
+        font-size: 20px;
+    }
+    &__item {
+        margin-top: 0;
+        gap: 20px;
+
+        &:last-child {
+            margin-top: 50px;
+        }
+        &-title {
+            margin-bottom: 15px;
+            font-size: 32px;
+
+        }
+        &-text {
+            font-size: 32px;
+        }
+    }
+
+    &__arrow {
+        width: 49px;
+        height: 50px;
+        &_r {
+            right: -68px;
+            transform: translateX(50%);
+        }
+        &_l {
+            left: -73px;
+            transform: translateX(-50%);
+        }
+    }
+    &__img {
+        width: 415px;
+        height: 415px;
+    }
+  }
+}
+
+@media (max-width: #{$mediaSM}) {
+  #{$root} {
+    padding: 68px 24px 60px;
+    &__title {
+        margin-bottom: 15px;
+        font-size: 70px;
+        &:before {
+            right: 68%;
+        }
+    }
+    &__subtitle {
+        margin-bottom: 40px;
+    }
+    &__item {
+        flex-direction: column;
+        align-items: start;
+        text-align: right;
+        &_r {
+            text-align: left;
+    
+        }
+        &_2 {
+            align-items: end;
+        }
+    }
+    &__inner_order {
+        order: -1;
+    }
+
+    &__arrow {
+        width: 49px;
+        height: 50px;
+        &_r {
+            right: -68px;
+            transform: translateX(50%);
+        }
+        &_l {
+            left: -73px;
+            transform: translateX(-50%);
+        }
+    }
+    &__img {
+        width: 415px;
+        height: 415px;
+    }
+  }
+}
+
+@media (max-width: #{$mediaXS}) {
+  #{$root} {
+    padding: 48px 16px 40px;
+    &__title {
+        margin-bottom: 8px;
+        margin-right: 0;
+        margin-left: auto;
+        font-size: 50px;
+        width: 188px;
+        &:before {
+            right: 48%;
+        }
+    }
+    &__subtitle {
+        margin-bottom: 32px;
+    }
+    &__item-title {
+        margin-bottom: 8px;
+        font-size: 20px;
+    }
+    &__item-text {
+        font-size: 20px;
+    }
+
+    &__arrow {
+        bottom: 82px;
+        &_r {
+            right: -40px;
+            transform: translateX(50%);
+        }
+        &_l {
+            left: -40px;
+            transform: translateX(-50%);
+        }
+    }
+    &__img {
+        width: 192px;
+        height: 192px;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+@import '@/assets/scss/variables/media';
+
+$root: '.tmpl-hh-office-slider';
+
+#{$root} {
+  margin-top: -1px;
+  margin-bottom: 70px;
+
+  & .tmpl-hh-office-slider__wrapper {
+    height: 703px;
+  }
+
+  &__slide {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+
+  &__pagination {
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+@media (max-width: #{$mediaMD}) {
+  #{$root} {
+    & .tmpl-hh-office-slider__wrapper {
+      height: 523px;
+    }
+
+    &__pagination {
+
+      margin-top: 24px;
+    }
+  }
+}
+
+@media (max-width: #{$mediaSM}) {
+  #{$root} {
+    & .tmpl-hh-office-slider__wrapper {
+      height: 343px;
+    }
+  }
+}
+
+@media (max-width: #{$mediaXS}) {
+  #{$root} {
+    & .tmpl-hh-office-slider__wrapper {
+      height: auto;
+      min-height: 163px;
+    }
+
+    &__pagination {
+      margin-top: 10px;
+      gap: 8px;
+    }
+  }
+}

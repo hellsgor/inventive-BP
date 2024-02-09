@@ -1,0 +1,72 @@
+@import '@/assets/scss/variables/media';
+@import '@/assets/scss/variables/colors';
+
+body {
+  margin: 0;
+}
+
+.hh-container {
+  width: 1250px;
+  margin: 0 auto;
+}
+
+.tmpl-hh-brand-container * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.tmpl-hh-brand-container {
+  max-width: 1250px;
+  padding: 51px 0 45px;
+}
+
+.tmpl-hh-section {
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  color: $black;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+@media (max-width: #{$mediaMD}) {
+  .hh-container {
+    width: 930px;
+  }
+
+  .tmpl-hh-brand-container {
+    padding: 30px 0 34px;
+  }
+}
+
+@media (max-width: #{$mediaSM}) {
+  .hh-container {
+    width: 610px;
+  }
+
+  .tmpl-hh-brand-container {
+    padding: 30px 0 23px
+  }
+}
+
+@media (max-width: #{$mediaXS}) {
+  .hh-container {
+    width: 100%;
+  }
+
+  .tmpl-hh-brand-container {
+    padding: 30px 15px 23px;
+  }
+}
+
+@media (max-width: #{$mediaXXS}) {
+  .tmpl-hh-brand-container {
+    padding-top: 20px;
+    padding-bottom: 16px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

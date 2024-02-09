@@ -1,0 +1,37 @@
+@import '@/assets/scss/variables/media';
+
+$root: '.tmpl-hh-digital-top';
+
+#{$root} {
+    background: url('https://hhcdn.ru/ichameleon/340202.jpg') center center/cover no-repeat;
+}
+
+@media (max-width: #{$mediaMD}) {
+  #{$root} {
+    &__title {
+      width: 288px;
+      &:after {
+        top: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: #{$mediaSM}) {
+  #{$root} {
+    padding-top: 442px;
+    &__title {
+      width: auto;
+      &:after {
+        top: -8px;
+        right: -11px;
+      }
+    }
+  }
+}
+
+@media (max-width: #{$mediaXS}) {
+  #{$root} {
+    padding-top: 357px;
+  }
+}

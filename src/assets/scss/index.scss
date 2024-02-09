@@ -1,0 +1,48 @@
+@import '@/assets/scss/global/reboot';
+@import '@/assets/scss/global/pages';
+@import '@/assets/scss/global/carousel-pagination';
+
+@import 'swiper/swiper.min.css';
+@import "./node_modules/swiper/modules/effect-fade/effect-fade";
+
+@import '@/assets/scss/components/wrapper';
+@import '@/assets/scss/components/container';
+
+@import '@/assets/scss/components/header';
+@import '@/assets/scss/components/back-button';
+@import '@/assets/scss/components/navigation';
+@import '@/assets/scss/components/ticker';
+@import '@/assets/scss/components/about';
+@import '@/assets/scss/components/why-we';
+@import '@/assets/scss/components/why-we-card';
+@import '@/assets/scss/components/appreciate';
+@import '@/assets/scss/components/video';
+@import '@/assets/scss/components/social';
+@import '@/assets/scss/components/map';
+@import '@/assets/scss/components/selector';
+@import '@/assets/scss/components/copyright';
+
+@import '@/assets/scss/components/stories';
+@import '@/assets/scss/components/story';
+
+@import '@/assets/scss/components/office/office-top';
+@import '@/assets/scss/components/office/office-banner';
+@import '@/assets/scss/components/office/office-slider';
+@import '@/assets/scss/components/office/office-about';
+
+
+@import '@/assets/scss/components/digital/digital-top';
+@import '@/assets/scss/components/digital/digital-banner';
+@import '@/assets/scss/components/digital/digital-slider';
+
+@import '@/assets/scss/components/start/start-top';
+@import '@/assets/scss/components/start/start-banner';
+@import '@/assets/scss/components/start/start-stories';
+
+@import '@/assets/scss/components/retail/retail-top';
+@import '@/assets/scss/components/retail/retail-banner';
+@import '@/assets/scss/components/retail/retail-stories';
+
+@import '@/assets/scss/components/office/office-stories';
+@import '@/assets/scss/components/digital/digital-stories';
+

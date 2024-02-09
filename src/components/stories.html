@@ -1,0 +1,13 @@
+<div class="tmpl-hh-stories">
+  <div class="tmpl-hh-stories__title">
+    <h2>True story*</h2>
+    <p>*реальная история</p>
+    <img alt="Arrow" src="./assets/images/decor-arrow.svg"/>
+  </div>
+
+  <div class="tmpl-hh-stories__stories">
+    {{#each this}}
+    {{> story this}}
+    {{/each}}
+  </div>
+</div>

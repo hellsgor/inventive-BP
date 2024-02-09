@@ -1,0 +1,125 @@
+@import '@/assets/scss/variables/media';
+
+$root: '.tmpl-hh-why-we-card';
+
+@mixin backgroundImage($image-path) {
+  background: url($image-path), lightgray 50% / cover no-repeat;
+  background-size: contain;
+}
+
+#{$root} {
+  display: flex;
+  padding: 0 28px 29px;
+  border-right: 1px solid $black;
+  flex-basis: calc(100% / 4);
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  row-gap: 24px;
+
+  &:first-child {
+    padding-left: 40px;
+  }
+
+  &:last-child {
+    padding-right: 40px;
+    border: none;
+  }
+
+  &_development {
+    #{$root}__image {
+      @include backgroundImage('https://hhcdn.ru/ichameleon/340179.jpg');
+    }
+  }
+
+  &_training {
+    #{$root}__image {
+      @include backgroundImage('https://hhcdn.ru/ichameleon/340181.jpg');
+    }
+  }
+
+  &_team {
+    #{$root}__image {
+      @include backgroundImage('https://hhcdn.ru/ichameleon/340180.jpg');
+    }
+  }
+
+  &_reliability {
+    #{$root}__image {
+      @include backgroundImage('https://hhcdn.ru/ichameleon/340178.jpg');
+    }
+  }
+
+
+  &__title {
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 120%;
+    color: $black;
+  }
+
+  &__image {
+    width: 185px;
+    height: 185px;
+    border-radius: 30px;
+  }
+
+  &__description {
+    width: 250px;
+    font-size: 25px;
+    line-height: 120%;
+  }
+}
+
+@media (max-width: #{$mediaMD}) {
+  #{$root} {
+    padding: 0 20px 38px;
+    flex-basis: 340px;
+
+    &__title {
+      font-size: 32px;
+    }
+
+    &__description {
+      width: 100%;
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: #{$mediaSM}) {
+  #{$root} {
+
+    &:first-child {
+      padding-left: 24px;
+    }
+
+    &:last-child {
+      padding-right: 24px;
+    }
+  }
+}
+
+@media (max-width: #{$mediaXXS}) {
+  #{$root} {
+    padding-bottom: 42px;
+    flex-basis: 185px;
+    row-gap: 16px;
+
+    &:first-child {
+      padding-left: 16px;
+    }
+
+    &:last-child {
+      padding-right: 16px;
+    }
+
+    &__title {
+      font-size: 24px;
+    }
+
+    &__description {
+      font-size: 16px;
+    }
+  }
+}

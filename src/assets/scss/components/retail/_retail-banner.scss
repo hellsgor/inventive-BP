@@ -1,0 +1,83 @@
+@import '@/assets/scss/variables/media';
+
+$root: '.tmpl-hh-retail-banner';
+
+#{$root} {
+    &__title_l {
+        width: 780px;
+        &:after {
+            left: -9px;
+            top: -6px;
+            
+        }
+    }
+    &__title_r {
+        max-width: 1069px;
+        &:after {
+            right: auto;
+            left: 83%;
+            top: 9px;
+        }
+    }
+    &__text_w {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: #{$mediaMD}) {
+  #{$root} {
+    &__title_l {
+        width: 560px;
+        &::after {
+            left: 7px;
+        }
+    }
+    &__title_r:after {
+        left: 73%;
+        top: 6px;
+    }
+  }
+}
+
+@media (max-width: #{$mediaSM}) {
+  #{$root} {
+    &__title_l {
+        width: 453px;
+        &:after {
+            left: -5px;
+            top: -9px;
+        }
+    }
+    &__title_r {
+        width: 560px;
+    }
+    &__title_r:after {
+        left: 51%;
+        top: -9px;
+    }
+
+  }
+}
+
+@media (max-width: #{$mediaXS}) {
+  #{$root} {
+    &__title_l {
+        width: 234px;
+    }
+    &__title_r {
+        width: 258px;
+        &:after {
+            left: 55%;
+        }
+    }
+
+  }
+}
+
+@media (max-width: 424px) {
+
+}
+
+@media (max-width: 374px) {
+
+}

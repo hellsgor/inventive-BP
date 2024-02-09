@@ -1,0 +1,46 @@
+@import '@/assets/scss/variables/media';
+
+$root: '.tmpl-hh-page';
+
+#{$root} {
+  &__main {
+    .tmpl-hh-back-button {
+      display: none;
+    }
+  }
+
+  &__start,
+  &__retail,
+  &__office,
+  &__digital {
+    .tmpl-hh-back-button {
+      display: flex;
+    }
+  }
+}
+
+@media (max-width: #{$mediaMD}) {
+  #{$root} {
+  }
+}
+
+@media (max-width: #{$mediaSM}) {
+  #{$root} {
+  }
+}
+
+@media (max-width: #{$mediaXS}) {
+  #{$root} {
+  }
+}
+
+@media (max-width: #{$mediaXXS}) {
+
+  #{$root} {
+    &__main {
+      .tmpl-hh-header__logo {
+        margin: 0 auto;
+      }
+    }
+  }
+}

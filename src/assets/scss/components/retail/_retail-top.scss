@@ -1,0 +1,59 @@
+@import '@/assets/scss/variables/media';
+
+$root: '.tmpl-hh-retail-top';
+
+#{$root} {
+    padding-top: 499px;
+    background: url('https://hhcdn.ru/ichameleon/340210.jpg') center center/cover no-repeat;
+    &__title {
+        width: 317px;
+        margin-bottom: 111px;
+        &:after {
+            top: 15px;
+            right: 44px;
+        }
+    }
+}
+
+@media (max-width: #{$mediaMD}) {
+  #{$root} {
+    padding-top: 368px;
+    &__title {
+        width: 247px;
+        margin-bottom: 60px;
+        &:after {
+            top: 18px;
+            right: auto;
+            left: 182px;
+        }
+    }
+  }
+}
+
+@media (max-width: #{$mediaSM}) {
+  #{$root} {
+    padding-top: 442px;
+    &__title {
+      width: 152px;
+      margin-bottom: 24px;
+      &:after {
+        top: -9px;
+        left: 165px;
+      }
+    }
+  }
+}
+
+@media (max-width: #{$mediaXS}) {
+  #{$root} {
+    padding-top: 407px;
+    &__title {
+        width: 109px;
+        margin-bottom: 16px;
+        &:after {
+          top: -6px;
+          left: 117px;
+        }
+      }
+  }
+}

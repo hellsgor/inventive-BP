@@ -1,0 +1,136 @@
+@import '@/assets/scss/variables/media';
+
+$root: '.tmpl-hh-about';
+
+#{$root} {
+  padding: 77px 40px 70px;
+  margin-bottom: 77px;
+  font-size: 25px;
+  line-height: 120%;
+  background-color: $black;
+  color: $white;
+
+  span[data-footnote=''] {
+    font-size: inherit;
+    color: $accent;
+  }
+
+  &__title {
+    position: relative;
+    display: flex;
+    margin-bottom: 30px;
+    flex-direction: column;
+    font-size: 100px;
+    font-weight: 400;
+    line-height: 99.99%;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 419px;
+      width: 30px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 65px;
+  }
+
+  &__tags {
+    display: flex;
+    margin-bottom: 72px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &__tag {
+    display: inline-flex;
+    padding: 8px 28px;
+    border: 1px solid $white;
+    border-radius: 9px;
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  &__descr {
+    margin-bottom: 5px;
+    color: $accent;
+  }
+}
+
+@media (max-width: #{$mediaMD}) {
+  #{$root} {
+    padding: 60px 40px;
+    margin-bottom: 60px;
+    font-size: 20px;
+
+    &__title {
+      margin-bottom: 24px;
+      font-size: 70px;
+
+      img {
+        top: -2px;
+        left: 286px;
+      }
+    }
+
+    &__text {
+      margin-bottom: 50px;
+    }
+
+    &__tags {
+      margin-bottom: 50px;
+      gap: 16px;
+    }
+  }
+}
+
+@media (max-width: #{$mediaSM}) {
+  #{$root} {
+    padding: 60px 24px;
+  }
+}
+
+@media (max-width: #{$mediaXS}) {
+  #{$root} {
+  }
+}
+
+@media (max-width: #{$mediaXXS}) {
+  #{$root} {
+    padding: 24px 16px 20px;
+    margin-bottom: 40px;
+    font-size: 16px;
+
+    &__title {
+      margin-bottom: 32px;
+      font-size: 36px;
+
+      img {
+        top: -4px;
+        left: 143px;
+        width: 20px;
+      }
+    }
+
+    &__tags {
+      margin-bottom: 32px;
+      gap: 12px;
+
+    }
+
+    &__tag {
+      display: inline;
+      width: 100%;
+      padding-right: 31px;
+      padding-left: 31px;
+      text-align: center;
+    }
+
+    &__descr {
+      font-size: 12px;
+    }
+  }
+}

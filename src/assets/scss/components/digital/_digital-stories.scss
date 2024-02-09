@@ -1,0 +1,75 @@
+@import '@/assets/scss/variables/media';
+
+$root: '.tmpl-hh-digital-stories';
+
+#{$root} {
+    &__title:before {
+        right: 41%;
+    }
+
+    &__arrow {
+        position: absolute;
+        bottom: 448px;
+        &_r {
+            right: -126px;
+            transform: translateX(50%);
+        }
+    }
+
+}
+
+@media (max-width: #{$mediaMD}) {
+  #{$root} {
+    &__title:before {
+        right: 39%;
+    }
+
+    &__item {
+        gap: 20px;
+    }
+    &__item:last-child {
+        margin-top: 0;
+    }
+    &__item-text {
+        width: 105%;
+    }
+
+    &__arrow {
+        width: 49px;
+        height: 50px;
+        bottom: 343px;
+
+    }
+  }
+}
+
+@media (max-width: #{$mediaSM}) {
+  #{$root} {
+    &__title:before {
+        right: 59%;
+    }
+    &__arrow {
+        width: 49px;
+        height: 50px;
+        bottom: 193px;
+
+    }
+    &__item-text {
+        width: 100%;
+    }
+
+
+  }
+}
+
+@media (max-width: #{$mediaXS}) {
+  #{$root} {
+    &__title:before {
+        right: 48%;
+    }
+    &__arrow {
+        bottom: 82px;
+
+    }
+  }
+}

@@ -1,0 +1,266 @@
+@import '@/assets/scss/variables/media';
+
+$root: '.tmpl-hh-appreciate';
+
+@mixin backgroundImage($image-path) {
+  background: url($image-path), lightgray -125.467px 0px / 176.559% 100% no-repeat;
+  background-size: cover;
+}
+
+#{$root} {
+  display: flex;
+  padding-right: 40px;
+  margin-bottom: 70px;
+  column-gap: 39px;
+
+  &__carousel {
+    height: fit-content;
+    flex: 0 0 600px;
+    -webkit-flex: 0 0 600px;
+  }
+
+  &__carousel-item {
+    width: 600px;
+    height: 705px;
+
+    &_expediency {
+      @include backgroundImage('https://hhcdn.ru/ichameleon/340182.jpg')
+    }
+
+    &_responsibility {
+      @include backgroundImage('https://hhcdn.ru/ichameleon/340185.jpg')
+    }
+
+    &_honesty {
+      @include backgroundImage('https://hhcdn.ru/ichameleon/340183.jpg')
+    }
+
+    &_respect {
+      @include backgroundImage('https://hhcdn.ru/ichameleon/340184.jpg')
+    }
+
+    &_growth {
+      @include backgroundImage('https://hhcdn.ru/ichameleon/340186.jpg')
+    }
+  }
+
+  &__text-content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__title {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    padding-top: 7px;
+    padding-left: 36px;
+    flex-direction: column;
+    row-gap: 33px;
+
+
+    h2 {
+      width: fit-content;
+      font-size: 100px;
+      font-weight: 400;
+      line-height: 100%;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 30px;
+    }
+  }
+
+  &__arrow {
+    display: flex;
+    padding-right: 29px;
+    justify-content: flex-end;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    display: inline-flex;
+    padding: 28px 40px;
+    border-bottom: 2px solid $black;
+    justify-content: flex-end;
+    color: $black;
+
+    &:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    &_active {
+      color: $accent;
+    }
+
+    span {
+      font-size: 42px;
+      text-align: right;
+      line-height: 120%;
+      transition: color .3s ease-in-out;
+
+      @media(hover: hover) {
+        &:hover {
+          color: $accent;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: #{$mediaMD}) {
+  #{$root} {
+    padding-right: 0;
+    padding-left: 40px;
+    margin-bottom: 60px;
+    column-gap: 16px;
+
+    &__carousel {
+      flex-basis: 487px;
+    }
+
+    &__carousel-item {
+      width: 487px;
+      height: 573px;
+    }
+
+    &__title {
+      padding: 0;
+      row-gap: 21px;
+
+      h2 {
+        font-size: 70px;
+      }
+
+      img {
+        top: 5px;
+        right: -14px;
+        width: 24px;
+      }
+    }
+
+    &__arrow {
+      height: 50px;
+      padding-right: 21px;
+
+      svg {
+        width: 29px;
+        height: 50px;
+      }
+    }
+
+    &__item {
+      padding: 20px 40px;
+
+      span {
+        font-size: 32px;
+      }
+    }
+  }
+}
+
+@media (max-width: #{$mediaSM}) {
+  #{$root} {
+    padding-left: 0;
+    flex-direction: column-reverse;
+    row-gap: 37px;
+
+    &__carousel {
+      padding: 0 24px;
+      flex-basis: 100%;
+    }
+
+    &__carousel-wrapper {
+      width: 100%;
+      height: 496px;
+    }
+
+    &__carousel-item {
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &__text-content {
+      align-items: flex-end;
+      justify-content: flex-start;
+    }
+
+    &__title {
+      margin-right: 38px;
+    }
+
+    &__arrow {
+      padding-right: 7px;
+    }
+
+    &__item {
+      padding: 20px 24px 20px 26px;
+    }
+  }
+}
+
+@media (max-width: #{$mediaXXS}) {
+  #{$root} {
+    margin-bottom: 40px;
+    row-gap: 24px;
+
+    &__text-content {
+      padding-right: 16px;
+      row-gap: 20px;
+    }
+
+    &__title {
+      margin-right: 18px;
+      row-gap: 10px;
+
+      h2 {
+        font-size: 50px;
+      }
+
+      img {
+        top: 1px;
+        right: -18px;
+      }
+    }
+
+    &__arrow {
+      padding-right: 2px;
+    }
+
+    &__items {
+      row-gap: 8px;
+    }
+
+    &__item {
+      padding: 0;
+      border: none;
+
+      span {
+        font-size: 24px;
+      }
+    }
+
+    &__carousel {
+      padding-right: 16px;
+      padding-left: 16px;
+    }
+
+    &__carousel-wrapper {
+      width: 100%;
+      height: 228px;
+    }
+  }
+}

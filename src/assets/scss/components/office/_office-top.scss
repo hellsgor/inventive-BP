@@ -1,0 +1,137 @@
+@import '@/assets/scss/variables/media';
+
+$root: '.tmpl-hh-office-top';
+
+#{$root} {
+  height: 852px;
+  padding-top: 499px;
+  border-radius: 50px;
+  margin-bottom: 35px;
+  background: url('https://hhcdn.ru/ichameleon/340192.png') center center/cover no-repeat;
+
+  &__title {
+    position: relative;
+    display: inline-block;
+    width: 344px;
+    padding: 26px 60px 26px 40px;
+    margin-bottom: 109px;
+    font-size: 100px;
+    line-height: 100%;
+    background-color: $black;
+    color: $white;
+
+    &:after {
+      position: absolute;
+      top: 19px;
+      right: 31px;
+      width: 30px;
+      height: 30px;
+      background: url('https://hhcdn.ru/ichameleon/340121.svg') center center/cover no-repeat;
+      content: '';
+    }
+  }
+
+  &__list {
+    display: flex;
+    padding-left: 40px;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    &-item {
+      font-size: 42px;
+      line-height: 120%;
+      color: $white
+    }
+  }
+}
+
+@media (max-width: #{$mediaMD}) {
+  #{$root} {
+    height: 634px;
+    padding-top: 366px;
+    border-radius: 50px;
+    margin-bottom: 25px;
+
+    &__title {
+      width: 279px;
+      padding: 30px 68px 30px 40px;
+      margin-bottom: 60px;
+      font-size: 70px;
+
+      &:after {
+        top: 34px;
+        right: 48px;
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &__list {
+      gap: 24px;
+
+      &-item {
+        font-size: 32px;
+      }
+    }
+  }
+}
+
+@media (max-width: #{$mediaSM}) {
+  #{$root} {
+    height: 606px;
+    padding-top: 388px;
+    border-radius: 50px;
+
+    &__title {
+      width: auto;
+      padding: 0;
+      padding-left: 24px;
+      margin-bottom: 24px;
+      font-size: 70px;
+      background-color: transparent;
+
+      &:after {
+        top: 6px;
+        right: -25px;
+      }
+    }
+
+    &__list {
+      padding-left: 24px;
+      gap: 16px;
+    }
+  }
+}
+
+
+@media (max-width: #{$mediaXS}) {
+  #{$root} {
+    height: 516px;
+    padding-top: 307px;
+    border-radius: 20px;
+    margin-bottom: 17px;
+
+    &__title {
+      padding-left: 16px;
+      margin-bottom: 16px;
+      font-size: 50px;
+
+      &:after {
+        top: 2px;
+        right: -13px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &__list {
+      padding-left: 16px;
+      flex-direction: column;
+      gap: 6px;
+
+      &-item {
+        font-size: 16px;
+      }
+    }
+  }
+}

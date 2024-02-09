@@ -1,0 +1,59 @@
+@import '@/assets/scss/variables/media';
+@import '@/assets/scss/variables/colors';
+
+$root: '.tmpl-hh-carousel';
+
+#{$root} {
+  &-pagination {
+    display: flex;
+    padding-top: 30px;
+    align-items: flex-end;
+    justify-content: center;
+    column-gap: 20px;
+  }
+
+  &-bullet {
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: $black;
+    cursor: pointer;
+
+    &_active {
+      background-color: $accent;
+    }
+  }
+}
+
+@media (max-width: #{$mediaMD}) {
+  #{$root} {
+    &-pagination {
+      padding-top: 24px;
+    }
+  }
+}
+
+@media (max-width: #{$mediaSM}) {
+  #{$root} {
+  }
+}
+
+@media (max-width: #{$mediaXS}) {
+  #{$root} {
+  }
+}
+
+@media (max-width: #{$mediaXXS}) {
+  #{$root} {
+    &-pagination {
+      padding-top: 10px;
+      column-gap: 8px;
+    }
+
+    &-bullet {
+      width: 6px;
+      height: 6px;
+    }
+  }
+}
